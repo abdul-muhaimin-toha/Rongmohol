@@ -47,10 +47,10 @@ const Hero = () => {
       </Swiper>
       <div className="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2  justify-center  p-10">
         <div className="flex max-w-full flex-col  text-center md:max-w-2xl">
-          <h1 className="mb-8 text-3xl font-semibold uppercase text-white md:text-4xl lg:text-5xl">
+          <h1 className="mb-8 text-4xl font-semibold uppercase text-white lg:text-6xl">
             Your Premier Destination for Artistic Expression
           </h1>
-          <p className="mb-8 text-sm text-white md:text-base">
+          <p className="font-semibolod mb-8 text-base text-white">
             Embark on a Journey of Self-Expression with Our Vast Selection of
             Painting, Crafted to Inspire Your Imagination and Bring Your Vision
             to Life
