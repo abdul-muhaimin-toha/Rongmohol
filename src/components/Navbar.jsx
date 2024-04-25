@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 
 const Navbar = () => {
   return (
-    <section className="">
+    <section className="bg-gradient-bg">
       <div className="mx-auto max-w-screen-2xl pr-3">
         <nav className="navbar">
           <div className="navbar-start items-center justify-start gap-2 ">
@@ -25,7 +25,7 @@ const Navbar = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        className="inline-block h-6 w-6 stroke-current"
+                        className="inline-block h-6 w-6 stroke-current text-white"
                       >
                         <path
                           strokeLinecap="round"
@@ -44,60 +44,62 @@ const Navbar = () => {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <ul className="menu min-h-full w-1/3 gap-8 bg-base-200 bg-gradient-bg p-8">
-                  <Link className=" text-white outline-none transition-all duration-150 hover:bg-transparent">
+                <ul className="menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8">
+                  <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
                     Home
                   </Link>
 
-                  <Link className=" text-white outline-none transition-all duration-150 hover:bg-transparent">
+                  <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
                     All Art
                   </Link>
 
-                  <Link className=" text-white outline-none transition-all duration-150 hover:bg-transparent">
+                  <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
                     My Art
                   </Link>
 
-                  <Link className=" text-white outline-none transition-all duration-150 hover:bg-transparent">
+                  <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
                     Add Art
                   </Link>
 
-                  <Link className="text-white outline-none transition-all duration-150 hover:bg-transparent md:hidden">
+                  <Link className="outline-none transition-all duration-150 hover:bg-transparent hover:text-white md:hidden">
                     Registration
                   </Link>
                 </ul>
               </div>
             </div>
             <Link className="flex items-center justify-center gap-3  pl-0 lg:p-2">
-              <img src={logo} alt="Rong Mohol Logo" className="h-6" />
+              <img
+                src={logo}
+                alt="Rong Mohol Logo"
+                className="ml-2 h-6 lg:ml-0"
+              />
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal gap-10 text-base font-medium  uppercase">
-              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-[#665DCD]">
+              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
                 Home
               </Link>
 
-              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-[#665DCD]">
+              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
                 All Art
               </Link>
 
-              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-[#665DCD]">
+              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
                 My Art
               </Link>
 
-              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-[#665DCD]">
+              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
                 Add Art
               </Link>
             </ul>
           </div>
           <div className="navbar-end gap-6">
-            <button className="flex items-center justify-center gap-1.5 font-semibold uppercase transition-all duration-150 hover:text-[#665DCD]">
-              <div className="h-4 w-4 rounded-full bg-gradient-bg"></div>
-              <p>Sign In</p>
+            <button className="flex items-center justify-center gap-1.5 font-semibold uppercase transition-all duration-150 hover:text-white">
+              Sign In
             </button>
-            <button className="hidden items-center justify-center gap-1.5 font-semibold uppercase transition-all duration-150 hover:text-[#665DCD] md:flex">
-              <div className="h-4 w-4 rounded-full bg-gradient-bg"></div>
-              <p>Registration</p>
+            <button className="hidden items-center justify-center gap-1.5 font-semibold uppercase transition-all duration-150 hover:text-white md:flex">
+              Registration
             </button>
           </div>
         </nav>
