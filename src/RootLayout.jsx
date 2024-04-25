@@ -1,5 +1,11 @@
+import Navbar from "./components/Navbar";
+
 const RootLayout = () => {
-  return <>this is Root Layout</>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default RootLayout;
