@@ -3,10 +3,10 @@ import logo from "../assets/logo.svg";
 const Footer = () => {
   return (
     <section className="bg-gradient-bg">
-      <div className="mx-auto max-w-screen-2xl p-4">
+      <div className="mx-auto max-w-screen-2xl px-4">
         <footer className="footer footer-center gap-4 p-10 ">
           <div className="flex max-w-xs items-center justify-center">
-            <img src={logo} alt="Logo" className="w-full" />
+            <img src={logo} alt="Logo" className="mt-4 w-full" />
           </div>
           <aside>
             <p className="mt-3 font-bold">Rong Mohol Industries Ltd.</p>

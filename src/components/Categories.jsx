@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 const Categories = () => {
   return (
     <section>
-      <div className="mx-auto max-w-screen-2xl p-4">
+      <div className="mx-auto max-w-screen-2xl px-4">
         <SectionHeading
           heading="Discover Our Art & Craft Categories"
           subHeading="Dive Into a World of Expression with Our Range of Painting and
