@@ -1,15 +1,14 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { updateProfile } from "firebase/auth";
 
-const RegistrationPage = () => {
-  const [isPassVisible, setIsPassVisible] = useState(false);
-  const navigate = useNavigate();
+const SignInPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [isPassVisible, setIsPassVisible] = useState(false);
   const {
     register,
     handleSubmit,
@@ -17,25 +16,16 @@ const RegistrationPage = () => {
     reset,
   } = useForm();
 
-  const { logout, createNewUser, googleLogin, githubLogin } = useAuth();
+  const { emailPassLogin, googleLogin, githubLogin } = useAuth();
 
   const handleFormSubmit = (data) => {
-    const { name, email, photoURL, password } = data;
-    createNewUser(email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        updateProfile(user, {
-          displayName: name,
-          photoURL: photoURL,
-        })
-          .then(() => {})
-          .catch((error) => {
-            console.error(error.message);
-          });
-        logout();
-        navigate(location?.state ? location.state : "/sign-in");
+    const { email, password } = data;
+    emailPassLogin(email, password)
+      .then(() => {
         reset();
-        toast("Profile Created successfully", {
+        navigate(location?.state ? location.state : "/");
+
+        toast("successfully logged in", {
           icon: "👏",
           style: {
             borderRadius: "10px",
@@ -47,7 +37,7 @@ const RegistrationPage = () => {
       .catch((error) => {
         const errorMessage = error.message;
         console.error(errorMessage);
-        toast("Registration failed! try again!", {
+        toast("Email and password doesn't matched", {
           icon: "❌",
           style: {
             borderRadius: "10px",
@@ -74,7 +64,7 @@ const RegistrationPage = () => {
       .catch((error) => {
         const errorMessage = error.message;
         console.error(errorMessage);
-        toast("Sign in with google failed! try again!", {
+        toast("Google sign in failed", {
           icon: "❌",
           style: {
             borderRadius: "10px",
@@ -101,7 +91,7 @@ const RegistrationPage = () => {
       .catch((error) => {
         const errorMessage = error.message;
         console.error(errorMessage);
-        toast("Sign in with github failed! try again!", {
+        toast("Github sign in failed", {
           icon: "❌",
           style: {
             borderRadius: "10px",
@@ -118,32 +108,17 @@ const RegistrationPage = () => {
         <div className="flex items-center justify-center py-10 md:py-24">
           <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">
             <h3 className="mb-8 text-center text-4xl font-bold text-[#665DCD] md:text-5xl ">
-              Create New Account!
+              Sign In!
             </h3>
+            <p></p>
             <form
               onSubmit={handleSubmit(handleFormSubmit)}
               className="flex  flex-col"
             >
               <input
-                type="name"
-                placeholder="Enter your Name"
-                className=" border p-4 focus:outline-[#665DCD]"
-                {...register("name", {
-                  required: {
-                    value: true,
-                    message: "You must fill name field",
-                  },
-                })}
-              />
-              {errors.name && (
-                <p className="px-1 pt-2 text-sm text-red-900 ">
-                  {errors.name.message}
-                </p>
-              )}
-              <input
                 type="email"
                 placeholder="Enter your email"
-                className=" mt-4 border p-4 focus:outline-[#665DCD]"
+                className=" border p-4 focus:outline-[#665DCD]"
                 {...register("email", {
                   required: {
                     value: true,
@@ -152,24 +127,8 @@ const RegistrationPage = () => {
                 })}
               />
               {errors.email && (
-                <p className="px-1 pt-2 text-sm text-red-900">
+                <p className="px-1 pt-2 text-sm text-red-900 ">
                   {errors.email.message}
-                </p>
-              )}
-              <input
-                type="text"
-                placeholder="Enter your photo url"
-                className=" mt-4 border p-4 focus:outline-[#665DCD]"
-                {...register("photoURL", {
-                  required: {
-                    value: true,
-                    message: "You must give an image link",
-                  },
-                })}
-              />
-              {errors.photoURL && (
-                <p className="px-1 pt-2 text-sm text-red-900">
-                  {errors.photoURL.message}
                 </p>
               )}
               <div className="relative">
@@ -181,16 +140,6 @@ const RegistrationPage = () => {
                     required: {
                       value: true,
                       message: "You must fill password field",
-                    },
-                    minLength: {
-                      value: 6,
-                      message:
-                        "Your password should be atleast 6 characters long",
-                    },
-                    pattern: {
-                      value: /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
-                      message:
-                        "Your password should contain both uppercase and lowercase character",
                     },
                   })}
                 />
@@ -212,7 +161,7 @@ const RegistrationPage = () => {
               )}
               <input
                 type="submit"
-                value="Sign Up"
+                value="Sign In"
                 className="mt-8 rounded-md bg-gradient-bg p-3 font-semibold transition-all duration-150 hover:text-white "
               />
             </form>
@@ -231,12 +180,12 @@ const RegistrationPage = () => {
               </button>
             </div>
             <p className="mt-6 text-center font-medium">
-              Already have an account?
+              Dont have an account?
               <Link
-                to="/sign-in"
+                to="/registration"
                 className="ml-2 text-[#5FA4E6] hover:underline "
               >
-                Sign In
+                Register
               </Link>
             </p>
           </div>
@@ -246,4 +195,4 @@ const RegistrationPage = () => {
   );
 };
 
-export default RegistrationPage;
+export default SignInPage;

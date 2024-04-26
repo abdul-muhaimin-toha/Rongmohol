@@ -55,7 +55,10 @@ const Hero = () => {
             Painting, Crafted to Inspire Your Imagination and Bring Your Vision
             to Life
           </p>
-          <Link className="self-center rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase transition duration-150 hover:text-white">
+          <Link
+            to="/registration"
+            className="self-center rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase transition duration-150 hover:text-white"
+          >
             Join Now
           </Link>
         </div>

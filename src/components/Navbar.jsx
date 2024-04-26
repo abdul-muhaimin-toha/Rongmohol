@@ -3,11 +3,11 @@ import logo from "../assets/logo.svg";
 
 const Navbar = () => {
   return (
-    <section className="bg-gradient-bg">
+    <section className="sticky right-0 top-0 z-50 bg-gradient-bg">
       <div className="mx-auto max-w-screen-2xl pr-3">
         <nav className="navbar">
           <div className="navbar-start items-center justify-start gap-2 ">
-            <div className="drawer w-12 lg:hidden">
+            <div className="drawer z-40 w-12 lg:hidden">
               <input
                 id="my-drawer-3"
                 type="checkbox"
@@ -45,7 +45,13 @@ const Navbar = () => {
                   className="drawer-overlay"
                 ></label>
                 <ul className="menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8">
-                  <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
+                  <Link to="/" className="justify-left flex items-center">
+                    <img src={logo} alt="Rong Mohol Logo" className="h-5" />
+                  </Link>
+                  <Link
+                    to="/"
+                    className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+                  >
                     Home
                   </Link>
 
@@ -57,17 +63,26 @@ const Navbar = () => {
                     My Art
                   </Link>
 
-                  <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
+                  <Link
+                    to="/add-art"
+                    className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+                  >
                     Add Art
                   </Link>
 
-                  <Link className="outline-none transition-all duration-150 hover:bg-transparent hover:text-white md:hidden">
+                  <Link
+                    to="/registration"
+                    className="outline-none transition-all duration-150 hover:bg-transparent hover:text-white md:hidden"
+                  >
                     Registration
                   </Link>
                 </ul>
               </div>
             </div>
-            <Link className="flex items-center justify-center gap-3  pl-0 lg:p-2">
+            <Link
+              to="/"
+              className="flex items-center justify-center gap-3  pl-0 lg:p-2"
+            >
               <img
                 src={logo}
                 alt="Rong Mohol Logo"
@@ -77,7 +92,10 @@ const Navbar = () => {
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal gap-10 text-base font-medium  uppercase">
-              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
+              <Link
+                to="/"
+                className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+              >
                 Home
               </Link>
 
@@ -89,18 +107,27 @@ const Navbar = () => {
                 My Art
               </Link>
 
-              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
+              <Link
+                to="/add-art"
+                className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+              >
                 Add Art
               </Link>
             </ul>
           </div>
           <div className="navbar-end gap-6">
-            <button className="flex items-center justify-center gap-1.5 font-semibold uppercase transition-all duration-150 hover:text-white">
+            <Link
+              to="/sign-in"
+              className="flex items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-black"
+            >
               Sign In
-            </button>
-            <button className="hidden items-center justify-center gap-1.5 font-semibold uppercase transition-all duration-150 hover:text-white md:flex">
+            </Link>
+            <Link
+              to="registration"
+              className="hidden items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-[black] md:flex"
+            >
               Registration
-            </button>
+            </Link>
           </div>
         </nav>
       </div>
