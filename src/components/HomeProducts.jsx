@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 const HomeProducts = () => {
   return (
-    <section className="mb-20">
+    <section>
       <div className="mx-auto max-w-screen-2xl px-4">
         <SectionHeading
           heading="Unveiling Our Top Rated Products"
