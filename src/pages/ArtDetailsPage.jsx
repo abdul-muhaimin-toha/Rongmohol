@@ -1,19 +1,12 @@
 import { Link } from "react-router-dom";
 import productImage from "../assets/products/product.jpg";
-import { FaRegStar, FaArrowAltCircleLeft, FaDollarSign } from "react-icons/fa";
+import { FaRegStar, FaDollarSign } from "react-icons/fa";
 
 const ArtDetailsPage = () => {
   return (
     <section>
       <div className="mx-auto max-w-screen-2xl px-4">
         <div className=" py-12 md:py-14">
-          <Link
-            to={-1}
-            className=" justify-left flex items-center gap-2 rounded-md  pb-5 font-semibold uppercase transition duration-150 hover:text-[#5FA4E6]"
-          >
-            <FaArrowAltCircleLeft />
-            <p>Go Back</p>
-          </Link>
           <h3 className="mb-6 text-2xl font-semibold text-[#5FA4E6] md:text-5xl">
             Celestial Symphony Details
           </h3>
@@ -22,13 +15,13 @@ const ArtDetailsPage = () => {
               <img
                 src={productImage}
                 alt="Product image"
-                className="h-[420px] w-full object-cover"
+                className="h-[420px] w-full rounded-md object-cover"
               />
             </div>
             <div className="w-full lg:w-2/6">
               <div className="rounded-lg bg-[#0f0d09] bg-opacity-95 p-3 md:p-5 lg:p-10">
                 <div className="mt-6 flex flex-col items-start justify-center">
-                  <p className="mb-2 text-xs font-semibold uppercase text-white">
+                  <p className="mb-1 text-xs font-semibold uppercase text-white">
                     Posted by: Abdul Muhaimin Toha
                   </p>
                   <div className="flex w-full flex-wrap items-center justify-between gap-4">
@@ -69,7 +62,7 @@ const ArtDetailsPage = () => {
                     a sense of wonder and awe.
                   </p>
                   <Link className="mt-6 w-full rounded-md bg-gradient-bg px-5 py-3 text-center font-semibold uppercase transition-all duration-150 hover:text-white">
-                    View Details
+                    Update Information
                   </Link>
                 </div>
               </div>
