@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 const AllArtTableRow = () => {
   return (
@@ -10,7 +11,10 @@ const AllArtTableRow = () => {
       <td>4.9</td>
       <td>In Stock</td>
       <td>
-        <Link className="text-[#665DCD]">View Details</Link>
+        <Link className="flex w-28 items-center justify-center gap-1 bg-[#665DCD] px-2 py-1 text-white">
+          <p>View Details</p>
+          <FaArrowAltCircleRight />
+        </Link>
       </td>
     </tr>
   );
