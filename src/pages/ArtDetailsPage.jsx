@@ -19,9 +19,9 @@ const ArtDetailsPage = () => {
               />
             </div>
             <div className="w-full lg:w-2/6">
-              <div className="rounded-lg bg-[#0f0d09] bg-opacity-95 p-3 md:p-5 lg:p-10">
+              <div className="rounded-lg bg-[#0f0d09] bg-opacity-95 p-3 md:p-5 lg:p-9">
                 <div className="mt-6 flex flex-col items-start justify-center">
-                  <p className="mb-1 text-xs font-semibold uppercase text-white">
+                  <p className="mb-4 text-xs font-semibold uppercase text-white">
                     Posted by: Abdul Muhaimin Toha
                   </p>
                   <div className="flex w-full flex-wrap items-center justify-between gap-4">

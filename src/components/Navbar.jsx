@@ -55,12 +55,15 @@ const Navbar = () => {
                     Home
                   </Link>
 
-                  <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
-                    All Art
+                  <Link
+                    to="all-arts"
+                    className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+                  >
+                    All Arts
                   </Link>
 
                   <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
-                    My Art
+                    My Arts
                   </Link>
 
                   <Link
@@ -99,12 +102,15 @@ const Navbar = () => {
                 Home
               </Link>
 
-              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
-                All Art
+              <Link
+                to="all-arts"
+                className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+              >
+                All Arts
               </Link>
 
               <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
-                My Art
+                My Arts
               </Link>
 
               <Link

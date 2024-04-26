@@ -11,6 +11,7 @@ import SignInPage from "./pages/SIgnInPage";
 import AddArtPage from "./pages/AddArtPage";
 import UpdateArtPage from "./pages/UpdateArtPage";
 import ArtDetailsPage from "./pages/ArtDetailsPage";
+import AllArtTablePage from "./pages/AllArtTablePage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -39,6 +40,14 @@ export const router = createBrowserRouter(
         element={
           <PrivateRoute>
             <ArtDetailsPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="all-arts"
+        element={
+          <PrivateRoute>
+            <AllArtTablePage />
           </PrivateRoute>
         }
       />
