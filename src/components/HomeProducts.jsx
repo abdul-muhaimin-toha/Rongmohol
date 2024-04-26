@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HomeProductCard from "./HomeProductCard";
 import SectionHeading from "./SectionHeading";
 
@@ -16,12 +17,11 @@ const HomeProducts = () => {
           <HomeProductCard />
           <HomeProductCard />
           <HomeProductCard />
-          <HomeProductCard />
-          <HomeProductCard />
-          <HomeProductCard />
-          <HomeProductCard />
-          <HomeProductCard />
-          <HomeProductCard />
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Link className="rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase transition duration-150 hover:text-white">
+            Explore More
+          </Link>
         </div>
       </div>
     </section>

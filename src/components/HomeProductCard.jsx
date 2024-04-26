@@ -28,7 +28,7 @@ const HomeProductCard = () => {
                 <FaRegStar />
               </div>
               <div className="flex items-center justify-center gap-1 rounded-full bg-white px-4 py-1 text-black">
-                <h4>Available</h4>
+                <h4>In Stock</h4>
               </div>
             </div>
             <div className=" flex items-center justify-center gap-1 text-2xl font-bold text-white">
