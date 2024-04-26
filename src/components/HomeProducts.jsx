@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import HomeProductCard from "./HomeProductCard";
 import SectionHeading from "./SectionHeading";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 const HomeProducts = () => {
   return (
@@ -19,8 +20,9 @@ const HomeProducts = () => {
           <HomeProductCard />
         </div>
         <div className="mt-10 flex justify-center">
-          <Link className="rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase transition duration-150 hover:text-white">
-            Explore More
+          <Link className=" flex items-center justify-center gap-4 rounded-md px-5 py-3 font-semibold uppercase transition duration-150 hover:text-[#5FA4E6]">
+            <p>Explore More</p>
+            <FaArrowAltCircleRight />
           </Link>
         </div>
       </div>
