@@ -10,6 +10,7 @@ import PrivateRoute from "./privateRoutes/PrivateRoute";
 import SignInPage from "./pages/SIgnInPage";
 import AddArtPage from "./pages/AddArtPage";
 import UpdateArtPage from "./pages/UpdateArtPage";
+import ArtDetailsPage from "./pages/ArtDetailsPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,14 @@ export const router = createBrowserRouter(
         element={
           <PrivateRoute>
             <UpdateArtPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="art-details"
+        element={
+          <PrivateRoute>
+            <ArtDetailsPage />
           </PrivateRoute>
         }
       />

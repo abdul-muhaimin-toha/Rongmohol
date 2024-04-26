@@ -72,7 +72,7 @@ const AddArtPage = () => {
               <input
                 type="submit"
                 value="Add Art"
-                className=" mt-4 rounded-md bg-gradient-bg p-3 font-bold  transition-all duration-150 hover:text-white md:col-span-2 "
+                className=" rounded-md bg-gradient-bg p-3 font-bold  transition-all duration-150 hover:text-white md:col-span-2 "
               />
             </form>
           </div>
