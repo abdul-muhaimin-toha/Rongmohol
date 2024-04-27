@@ -14,7 +14,7 @@ const CategoriesCard = ({ category }) => {
         <h3 className="mb-8 text-3xl font-bold uppercase md:mb-0 md:min-h-28 md:text-4xl">
           {name}
         </h3>
-        <p className="text-base font-normal md:min-h-52 md:text-base lg:min-h-60 xl:min-h-36">
+        <p className="text-base font-normal md:min-h-36 md:text-base lg:min-h-48 xl:min-h-36">
           {description}
         </p>
         <div className="mt-8 flex items-center  justify-start gap-2 font-bold  uppercase md:mt-4 lg:mt-6">

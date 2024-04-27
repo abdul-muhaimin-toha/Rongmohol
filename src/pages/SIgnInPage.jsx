@@ -162,7 +162,7 @@ const SignInPage = () => {
               <input
                 type="submit"
                 value="Sign In"
-                className="mt-8 rounded-md bg-gradient-bg p-3 font-semibold transition-all duration-150 hover:text-white "
+                className="mt-8 cursor-pointer rounded-md bg-gradient-bg p-3 font-semibold transition-all duration-150 hover:text-white "
               />
             </form>
             <div className="mt-3 flex flex-col gap-3 md:mt-4 md:flex-row">
