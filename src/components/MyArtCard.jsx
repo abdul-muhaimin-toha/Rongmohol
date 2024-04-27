@@ -3,6 +3,7 @@ import { FaRegStar, FaDollarSign } from "react-icons/fa";
 
 const MyArtCard = ({ art }) => {
   const {
+    _id,
     title,
     category,
     description,
@@ -15,6 +16,11 @@ const MyArtCard = ({ art }) => {
     posted_by_name,
     posted_by_email,
   } = art || {};
+
+  const handleArtDelete = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div
       style={{
@@ -22,7 +28,7 @@ const MyArtCard = ({ art }) => {
       }}
       className="flex rounded-lg bg-cover shadow-lg"
     >
-      <div className="rounded-lg bg-[#0f0d09] bg-opacity-95 p-3 md:p-5 lg:p-8">
+      <div className="rounded-lg bg-[#0f0d09] bg-opacity-90 p-3 md:p-5 lg:p-8">
         <img
           src={img_URL}
           alt="Product Image"
@@ -56,12 +62,15 @@ const MyArtCard = ({ art }) => {
           <p className="mt-4 rounded-sm bg-[#D2AB67] p-2 text-xs capitalize">
             Customization Possible: {customizable}
           </p>
-          <Link className="mt-6 w-full rounded-md bg-gradient-bg px-5 py-3 text-center font-semibold uppercase transition-all duration-150 hover:text-white">
+          <Link
+            to={`/update-art/${_id}`}
+            className="mt-6 w-full rounded-md bg-gradient-bg px-5 py-3 text-center font-semibold uppercase transition-all duration-150 hover:text-white"
+          >
             Update Art Details
           </Link>
-          <Link className="mt-2 w-full rounded-md bg-gradient-bg px-5 py-3 text-center font-semibold uppercase transition-all duration-150 hover:text-white">
+          <button className="mt-2 w-full rounded-md bg-gradient-bg px-5 py-3 text-center font-semibold uppercase transition-all duration-150 hover:text-white">
             Delete Art
-          </Link>
+          </button>
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@ export const router = createBrowserRouter(
         }
       />
       <Route
-        path="update-art"
+        path="update-art/:id"
         element={
           <PrivateRoute>
             <UpdateArtPage />
