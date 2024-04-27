@@ -1,7 +1,11 @@
 import MyArtCard from "../components/MyArtCard";
-import SectionHeading from "../components/SectionHeading";
+import useAuth from "../hooks/useAuth";
+import useMyArt from "../hooks/useMyArt";
 
 const MyArtPage = () => {
+  const { user } = useAuth();
+  const { data } = useMyArt(user);
+
   return (
     <section>
       <div className="mx-auto max-w-screen-2xl px-4">
@@ -10,12 +14,9 @@ const MyArtPage = () => {
             Celestial Symphony Details
           </h3>
           <div className="mt-12 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
-            <MyArtCard />
-            <MyArtCard />
-            <MyArtCard />
-            <MyArtCard />
-            <MyArtCard />
-            <MyArtCard />
+            {data?.map((art) => (
+              <MyArtCard key={art._id} art={art} />
+            ))}
           </div>
         </div>
       </div>

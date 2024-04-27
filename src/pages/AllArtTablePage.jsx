@@ -1,6 +1,8 @@
 import AllArtTableRow from "../components/AllArtTableRow";
+import useAllArt from "../hooks/useAllArt";
 
 const AllArtTablePage = () => {
+  const { data } = useAllArt();
   return (
     <section>
       <div className="mx-auto max-w-screen-2xl px-4">
@@ -23,21 +25,9 @@ const AllArtTablePage = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
-                  <AllArtTableRow />
+                  {data?.map((art, index) => (
+                    <AllArtTableRow index={index} key={art._id} art={art} />
+                  ))}
                 </tbody>
                 <tfoot className="text-[#665DCD]">
                   <tr>
