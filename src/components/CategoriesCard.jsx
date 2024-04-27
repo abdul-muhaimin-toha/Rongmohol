@@ -1,18 +1,23 @@
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
-const CategoriesCard = () => {
+const CategoriesCard = ({ category }) => {
+  const { name, description, image_URL } = category || {};
+
   return (
-    <div className="bg-categories-1 rounded-lg bg-cover text-white">
-      <div className="flex flex-col rounded-lg bg-[#665DCD] bg-opacity-80 p-10 md:p-12">
-        <h3 className="mb-6 text-3xl font-bold uppercase md:text-4xl">
-          Landscape Painting
+    <div
+      style={{
+        backgroundImage: `url(${image_URL || "/src/assets/categories/category-landscape.jpg"})`,
+      }}
+      className="flex overflow-hidden rounded-lg bg-cover text-white"
+    >
+      <div className="flex flex-col rounded-lg bg-[#665DCD] bg-opacity-85 p-8  lg:p-10">
+        <h3 className="mb-8 text-3xl font-bold uppercase md:mb-0 md:min-h-28 md:text-4xl">
+          {name}
         </h3>
-        <p className="flex-grow text-base font-normal md:text-base">
-          Immerse yourself in the beauty of nature with our collection of
-          landscape painting essentials. From rolling hills to serene seascapes,
-          capture the essence of the great outdoors with every brushstroke.
+        <p className="text-base font-normal md:min-h-52 md:text-base lg:min-h-60 xl:min-h-36">
+          {description}
         </p>
-        <div className="mt-6 flex items-center justify-start gap-2  font-bold uppercase">
+        <div className="mt-8 flex items-center  justify-start gap-2 font-bold  uppercase md:mt-4 lg:mt-6">
           <p>Expolore</p>
           <FaArrowAltCircleRight />
         </div>

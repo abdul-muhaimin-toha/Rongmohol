@@ -1,7 +1,9 @@
+import useCategories from "../hooks/useCategories";
 import CategoriesCard from "./CategoriesCard";
 import SectionHeading from "./SectionHeading";
 
 const Categories = () => {
+  const { data } = useCategories();
   return (
     <section>
       <div className="mx-auto max-w-screen-2xl px-4">
@@ -11,12 +13,9 @@ const Categories = () => {
             Drawing Categories"
         />
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
-          <CategoriesCard />
-          <CategoriesCard />
-          <CategoriesCard />
-          <CategoriesCard />
-          <CategoriesCard />
-          <CategoriesCard />
+          {data?.map((category) => (
+            <CategoriesCard key={category._id} category={category} />
+          ))}
         </div>
       </div>
     </section>
