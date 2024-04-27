@@ -56,10 +56,10 @@ const Hero = () => {
             to Life
           </p>
           <Link
-            to="/registration"
+            to="/add-art"
             className="self-center rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase transition duration-150 hover:text-white"
           >
-            Join Now
+            Post Your Art
           </Link>
         </div>
       </div>

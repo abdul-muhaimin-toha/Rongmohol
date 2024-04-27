@@ -7,7 +7,7 @@ const AllArtTablePage = () => {
         <div className="flex items-center justify-center py-10 md:py-24">
           <div className="w-full max-w-screen-lg rounded p-6  shadow-xl md:p-10">
             <h3 className="mb-8 text-center text-4xl font-bold text-[#665DCD] md:text-5xl ">
-              All Art Dashboard
+              All Arts Informations
             </h3>
             <div className="mt-6 overflow-x-auto md:mt-16">
               <table className="table table-xs">

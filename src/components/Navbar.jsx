@@ -1,7 +1,36 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import useAuth from "../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { user, logout } = useAuth();
+
+  const handleLogOut = () => {
+    logout()
+      .then(() => {
+        toast("Successfully log out", {
+          icon: "👏",
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+      })
+      .catch((error) => {
+        console.error(error.message);
+        toast("Log out failed", {
+          icon: "❌",
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+      });
+  };
+
   return (
     <section className="sticky right-0 top-0 z-50 bg-gradient-bg">
       <div className="mx-auto max-w-screen-2xl pr-3">
@@ -44,7 +73,7 @@ const Navbar = () => {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <ul className="menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8">
+                <ul className="menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8 text-black">
                   <Link to="/" className="justify-left flex items-center">
                     <img src={logo} alt="Rong Mohol Logo" className="h-5" />
                   </Link>
@@ -62,7 +91,10 @@ const Navbar = () => {
                     All Arts
                   </Link>
 
-                  <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
+                  <Link
+                    to="my-arts"
+                    className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+                  >
                     My Arts
                   </Link>
 
@@ -73,12 +105,14 @@ const Navbar = () => {
                     Add Art
                   </Link>
 
-                  <Link
-                    to="/registration"
-                    className="outline-none transition-all duration-150 hover:bg-transparent hover:text-white md:hidden"
-                  >
-                    Registration
-                  </Link>
+                  {!user && (
+                    <Link
+                      to="/registration"
+                      className="outline-none transition-all duration-150 hover:bg-transparent hover:text-white md:hidden"
+                    >
+                      Registration
+                    </Link>
+                  )}
                 </ul>
               </div>
             </div>
@@ -94,7 +128,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal gap-10 text-base font-medium  uppercase">
+            <ul className="menu menu-horizontal gap-10 text-base font-medium uppercase text-black">
               <Link
                 to="/"
                 className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
@@ -109,7 +143,10 @@ const Navbar = () => {
                 All Arts
               </Link>
 
-              <Link className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white">
+              <Link
+                to="my-arts"
+                className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+              >
                 My Arts
               </Link>
 
@@ -122,18 +159,47 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end gap-6">
-            <Link
-              to="/sign-in"
-              className="flex items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-black"
-            >
-              Sign In
-            </Link>
-            <Link
-              to="registration"
-              className="hidden items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-[black] md:flex"
-            >
-              Registration
-            </Link>
+            {user ? (
+              <div title={user.displayName} className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="avatar btn btn-circle btn-ghost"
+                >
+                  <div className="w-9 rounded-full ring-2 ring-blue-400">
+                    <img alt="User Image" src={user.photoURL} />
+                  </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 space-y-1  rounded-sm bg-base-100 bg-gradient-bg p-2 text-black shadow"
+                >
+                  <li>
+                    <p>{user.displayName}</p>
+                  </li>
+                  <li>
+                    <button onClick={handleLogOut}>Sign Out</button>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center gap-6">
+                <Link
+                  to="/sign-in"
+                  className="flex items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-black"
+                >
+                  <div className="h-4 w-4 rounded-full bg-gradient-bg"></div>
+                  <p>Sign In</p>
+                </Link>
+                <Link
+                  to="registration"
+                  className="hidden items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-[black] md:flex"
+                >
+                  <div className="h-4 w-4 rounded-full bg-gradient-bg"></div>
+                  <p>Registration</p>
+                </Link>
+              </div>
+            )}
           </div>
         </nav>
       </div>
