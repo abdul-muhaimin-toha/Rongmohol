@@ -55,7 +55,7 @@ const HomeProductCard = ({ art }) => {
               <h3>{price}</h3> <FaDollarSign />
             </div>
           </div>
-          <p className="mt-6 text-sm text-white xl:min-h-28">{description}</p>
+          <p className="mt-6 grow text-sm text-white">{description}</p>
           <Link className="mt-6 w-full rounded-md bg-gradient-bg px-5 py-3 text-center font-semibold uppercase transition-all duration-150 hover:text-white">
             View Details
           </Link>
