@@ -73,11 +73,11 @@ const ArtDetailsPage = () => {
                 </div>
               </div>
               <Link
-                to={".."}
+                to="/"
                 className="mt-8 flex items-center justify-center gap-4 rounded-md px-5 py-3 font-semibold uppercase text-black transition duration-150 hover:text-[#5FA4E6] md:self-end dark:text-white"
               >
                 <FaRegArrowAltCircleLeft />
-                <p>Go Back</p>
+                <p>Go Back Home</p>
               </Link>
             </div>
           </div>

@@ -8,7 +8,7 @@ const ContactUs = () => {
           heading="Get in Touch with Us"
           subHeading="Reach Out for Inquiries, Assistance, or Collaborations"
         />
-        <form className="mx-auto flex max-w-screen-md flex-col text-black dark:text-white">
+        <form className="mx-auto flex max-w-screen-md flex-col text-black">
           <input
             type="text"
             placeholder="Enter your name"
@@ -30,7 +30,7 @@ const ContactUs = () => {
             disabled
             type="submit"
             value="Send Message"
-            className="dark:bg-gradient-bg-2 mt-4 cursor-pointer rounded-md bg-gradient-bg  p-3 font-bold transition-all duration-150 hover:text-white md:mt-6 "
+            className="mt-4 cursor-pointer rounded-md bg-gradient-bg p-3  font-bold transition-all duration-150 hover:text-white md:mt-6 dark:bg-gradient-bg-2 "
           />
         </form>
       </div>

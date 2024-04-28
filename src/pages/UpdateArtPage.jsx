@@ -76,7 +76,7 @@ const UpdateArtPage = () => {
           <div className="mx-auto max-w-screen-2xl px-4">
             <div className="flex items-center justify-center py-10">
               <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">
-                <h2 className="mx-auto mb-8 max-w-xl text-center text-2xl font-semibold uppercase text-black text-black lg:text-3xl dark:text-white">
+                <h2 className="mx-auto mb-8 max-w-xl text-center text-2xl font-semibold uppercase text-black  lg:text-3xl dark:text-white">
                   Update {data?.title} Information!
                 </h2>
                 <form
@@ -88,7 +88,7 @@ const UpdateArtPage = () => {
                     name="title"
                     defaultValue={data?.title}
                     placeholder="Enter your art title"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
 
                   <input
@@ -96,7 +96,7 @@ const UpdateArtPage = () => {
                     name="category"
                     defaultValue={data?.category}
                     placeholder="Your art category"
-                    className="col-span-1 border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="col-span-1 border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
 
                   <textarea
@@ -105,7 +105,7 @@ const UpdateArtPage = () => {
                     defaultValue={data?.description}
                     cols="2"
                     rows="3"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] md:col-span-2 dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] md:col-span-2 dark:border-[#525155] "
                   ></textarea>
 
                   <input
@@ -113,42 +113,42 @@ const UpdateArtPage = () => {
                     type="text"
                     defaultValue={data?.price}
                     placeholder="Price in USD"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
                   <input
                     type="text"
                     name="rating"
                     defaultValue={data?.rating}
                     placeholder="Rating out of 5"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
                   <input
                     type="text"
                     name="customizable"
                     defaultValue={data?.customizable}
                     placeholder="Customizeable? (yes / no)"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
                   <input
                     type="text"
                     name="processing_time"
                     defaultValue={data?.processing_time}
                     placeholder="Processing time in minute"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
                   <input
                     type="text"
                     name="stock_status"
                     defaultValue={data?.stock_status}
                     placeholder="Stock status (in stock / stock out)"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
                   <input
                     type="text"
                     name="img_URL"
                     defaultValue={data?.img_URL}
                     placeholder="Image URL"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
 
                   <input
@@ -157,7 +157,7 @@ const UpdateArtPage = () => {
                     name="posted_by_name"
                     defaultValue={data?.posted_by_name}
                     placeholder="User name"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] disabled:bg-white dark:border-[#525155] "
                   />
                   <input
                     disabled
@@ -165,13 +165,13 @@ const UpdateArtPage = () => {
                     name="posted_by_email"
                     defaultValue={data?.posted_by_email}
                     placeholder="User email"
-                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] disabled:bg-white dark:border-[#525155] "
                   />
 
                   <input
                     type="submit"
                     value="Update Information"
-                    className="dark:bg-gradient-bg-2 mt-4 cursor-pointer rounded-md bg-gradient-bg p-3  font-bold text-black transition-all duration-150 hover:text-white md:col-span-2 "
+                    className="mt-4 cursor-pointer rounded-md bg-gradient-bg p-3 font-bold  text-black transition-all duration-150 hover:text-white md:col-span-2 dark:bg-gradient-bg-2 "
                   />
                 </form>
               </div>

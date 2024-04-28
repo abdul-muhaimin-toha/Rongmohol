@@ -5,7 +5,7 @@ const AllArtTableRow = ({ art, index }) => {
   const { _id, title, category, price, rating, posted_by_email, stock_status } =
     art || {};
   return (
-    <tr>
+    <tr className="dark:text-white">
       <th className="text-[#5FA4E6]">{index + 1}</th>
       <td>{title}</td>
       <td>{category}</td>

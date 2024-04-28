@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 
 const Footer = () => {
   return (
-    <section className="dark:bg-gradient-bg-2 bg-gradient-bg text-black dark:text-white">
+    <section className="bg-gradient-bg text-black dark:bg-gradient-bg-2 dark:text-white">
       <div className="mx-auto max-w-screen-2xl px-4">
         <footer className="footer footer-center gap-4 p-10 ">
           <div className="flex max-w-xs items-center justify-center">
@@ -11,6 +11,9 @@ const Footer = () => {
           </div>
           <aside>
             <p className="mt-3 font-bold">Rong Mohol Industries Ltd.</p>
+            <p>Azampur, Uttara, Dhaka, Bangladesh.</p>
+            <p>880 17903 49650</p>
+            <p>abdulmuhaimintoha.business@gmail.com</p>
             <p>Designed & Developed by Abdul Muhaimin Toha</p>
             <p>Copyright © 2024 - All right reserved</p>
           </aside>

@@ -3,6 +3,7 @@ import logo from "../assets/logo.svg";
 import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
 import defaultUser from "../assets/user_default.png";
+import ThemeController from "./ThemeController";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -33,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <section className="dark:bg-gradient-bg-2 sticky right-0 top-0 z-50 bg-gradient-bg">
+    <section className="sticky right-0 top-0 z-50 bg-gradient-bg dark:bg-gradient-bg-2">
       <div className="mx-auto max-w-screen-2xl pr-3">
         <nav className="navbar">
           <div className="navbar-start items-center justify-start gap-2 ">
@@ -74,7 +75,7 @@ const Navbar = () => {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <ul className="dark:bg-gradient-bg-2 menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8 text-black">
+                <ul className="menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8 text-black dark:bg-gradient-bg-2">
                   <Link to="/" className="justify-left flex items-center">
                     <img src={logo} alt="Rong Mohol Logo" className="h-5" />
                   </Link>
@@ -173,7 +174,8 @@ const Navbar = () => {
               </Link>
             </ul>
           </div>
-          <div className="navbar-end gap-6">
+          <div className="navbar-end gap-5">
+            <ThemeController />
             {user ? (
               <div title={user.displayName} className="dropdown dropdown-end">
                 <div
@@ -187,7 +189,7 @@ const Navbar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="dark:bg-gradient-bg-2 menu dropdown-content menu-sm z-[1] mt-3 w-52  space-y-1 rounded-sm bg-base-100 bg-gradient-bg p-2 text-black shadow"
+                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 space-y-1  rounded-sm bg-base-100 bg-gradient-bg p-2 text-black shadow dark:bg-gradient-bg-2"
                 >
                   <li>
                     <p>{user.displayName}</p>
@@ -205,7 +207,7 @@ const Navbar = () => {
                   to="/sign-in"
                   className="flex items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-black"
                 >
-                  <div className="bg-gradient-bg-2 h-4 w-4 rounded-full dark:bg-gradient-bg"></div>
+                  <div className="h-4 w-4 rounded-full bg-gradient-bg-2 dark:bg-gradient-bg"></div>
                   <p>Sign In</p>
                 </Link>
                 <Link

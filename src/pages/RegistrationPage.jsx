@@ -122,7 +122,7 @@ const RegistrationPage = () => {
             </h2>
             <form
               onSubmit={handleSubmit(handleFormSubmit)}
-              className="flex flex-col  text-black dark:text-white"
+              className="flex flex-col  text-black"
             >
               <input
                 type="name"
@@ -199,9 +199,9 @@ const RegistrationPage = () => {
                   onClick={() => setIsPassVisible(!isPassVisible)}
                 >
                   {isPassVisible ? (
-                    <FaEyeSlash className="absolute right-5 top-2/3 -translate-y-1/2  text-2xl text-[#665DCD] dark:text-white" />
+                    <FaEyeSlash className="absolute right-5 top-2/3 -translate-y-1/2  text-2xl text-[#665DCD] " />
                   ) : (
-                    <FaEye className="absolute right-5 top-2/3 -translate-y-1/2  text-2xl text-[#665DCD] dark:text-white" />
+                    <FaEye className="absolute right-5 top-2/3 -translate-y-1/2  text-2xl text-[#665DCD] " />
                   )}
                 </p>
               </div>
@@ -213,7 +213,7 @@ const RegistrationPage = () => {
               <input
                 type="submit"
                 value="Sign Up"
-                className="dark:bg-gradient-bg-2 mt-8 cursor-pointer rounded-md bg-gradient-bg p-3 font-semibold text-black transition-all duration-150 hover:text-white "
+                className="mt-8 cursor-pointer rounded-md bg-gradient-bg p-3 font-semibold text-black transition-all duration-150 hover:text-white dark:bg-gradient-bg-2 "
               />
             </form>
             <div className="mt-3 flex flex-col gap-3 md:mt-4 md:flex-row">

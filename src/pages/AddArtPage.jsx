@@ -78,14 +78,14 @@ const AddArtPage = () => {
                 type="text"
                 name="title"
                 placeholder="Enter your art title"
-                className="border border-[#b7b4d8] p-4  text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4  text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
 
               <input
                 type="text"
                 name="category"
                 placeholder="Your art category"
-                className="col-span-1 border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="col-span-1 border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
 
               <textarea
@@ -93,44 +93,44 @@ const AddArtPage = () => {
                 placeholder="Short Description"
                 cols="2"
                 rows="3"
-                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] md:col-span-2 dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] md:col-span-2 dark:border-[#2e2d36] "
               ></textarea>
 
               <input
                 type="text"
                 name="price"
                 placeholder="Price in USD"
-                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
               <input
                 type="text"
                 name="rating"
                 placeholder="Rating out of 5"
-                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
               <input
                 type="text"
                 name="customizable"
                 placeholder="Customizable? (yes / no)"
-                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
               <input
                 type="text"
                 name="processing_time"
                 placeholder="Processing time in minute"
-                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
               <input
                 type="text"
                 name="stock_status"
                 placeholder="Stock status (in stock / stock out)"
-                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
               <input
                 type="text"
                 name="img_URL"
                 placeholder="Image URL"
-                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
 
               <input
@@ -138,20 +138,20 @@ const AddArtPage = () => {
                 defaultValue={user.displayName}
                 name="posted_by_name"
                 placeholder="User name"
-                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
               <input
                 type="text"
                 defaultValue={user.email}
                 name="posted_by_email"
                 placeholder="User email"
-                className="border border-[#b7b4d8] p-4 text-black  focus:outline-[#665DCD] dark:border-[#2e2d36] dark:text-white"
+                className="border border-[#b7b4d8] p-4 text-black  focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
 
               <input
                 type="submit"
                 value="Add Art"
-                className="dark:bg-gradient-bg-2 cursor-pointer rounded-md bg-gradient-bg p-3 font-bold   text-black transition-all duration-150 hover:text-white md:col-span-2 "
+                className="cursor-pointer rounded-md bg-gradient-bg p-3 font-bold text-black   transition-all duration-150 hover:text-white md:col-span-2 dark:bg-gradient-bg-2 "
               />
             </form>
           </div>
