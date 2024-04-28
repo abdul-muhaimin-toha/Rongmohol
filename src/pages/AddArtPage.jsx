@@ -51,7 +51,7 @@ const AddArtPage = () => {
       })
       .catch(function (error) {
         console.error(error.message);
-        toast("New art post failed, try again!", {
+        toast("New art post failed, try", {
           icon: "❌",
           style: {
             borderRadius: "10px",
@@ -65,11 +65,11 @@ const AddArtPage = () => {
   return (
     <section>
       <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex items-center justify-center py-10 md:py-24">
+        <div className="flex items-center justify-center py-10">
           <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">
-            <h3 className="mb-8 text-center text-4xl font-bold text-[#665DCD] md:text-5xl ">
-              Add Your Art Now!
-            </h3>
+            <h2 className="mx-auto mb-12 mt-6 max-w-2xl text-center text-4xl font-semibold uppercase md:text-5xl">
+              Add your art now!
+            </h2>
             <form
               onSubmit={handleAddArt}
               className="grid grid-cols-1 gap-3 md:grid-cols-2"

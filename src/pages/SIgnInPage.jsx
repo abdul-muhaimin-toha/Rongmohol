@@ -105,12 +105,11 @@ const SignInPage = () => {
   return (
     <section>
       <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex items-center justify-center py-10 md:py-24">
+        <div className="flex items-center justify-center py-10">
           <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">
-            <h3 className="mb-8 text-center text-4xl font-bold text-[#665DCD] md:text-5xl ">
-              Sign In!
-            </h3>
-            <p></p>
+            <h2 className="mx-auto mb-12 mt-6 max-w-2xl text-center text-4xl font-semibold uppercase md:text-5xl">
+              Sign in now!
+            </h2>
             <form
               onSubmit={handleSubmit(handleFormSubmit)}
               className="flex  flex-col"

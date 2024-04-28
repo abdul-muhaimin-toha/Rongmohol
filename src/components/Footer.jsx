@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
           <aside>
             <p className="mt-3 font-bold">Rong Mohol Industries Ltd.</p>
-            <p>Design & Develop by Abdul Muhaimin Toha</p>
+            <p>Designed & Developed by Abdul Muhaimin Toha</p>
             <p>Copyright © 2024 - All right reserved</p>
           </aside>
           <nav>

@@ -13,7 +13,6 @@ export default {
         "hero-slider-2": "url('/src/assets/slider/slider-bg-2.jpg')",
         "hero-slider-3": "url('/src/assets/slider/slider-bg-3.jpg')",
         "hero-slider-4": "url('/src/assets/slider/slider-bg-4.jpg')",
-        "categories-1": "url('/src/assets/categories/category-landscape.jpg')",
       },
     },
   },

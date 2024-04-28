@@ -7,10 +7,10 @@ const AllArtTablePage = () => {
     <section>
       <div className="mx-auto max-w-screen-2xl px-4">
         <div className="flex items-center justify-center py-10 md:py-24">
-          <div className="w-full max-w-screen-lg rounded p-6  shadow-xl md:p-10">
-            <h3 className="mb-8 text-center text-4xl font-bold text-[#665DCD] md:text-5xl ">
-              All Arts Informations
-            </h3>
+          <div className="w-full max-w-screen-xl rounded p-6  shadow-xl md:p-10">
+            <h2 className="mx-auto max-w-xl text-4xl font-semibold uppercase lg:text-5xl">
+              All Arts Dashboard
+            </h2>
             <div className="mt-6 overflow-x-auto md:mt-16">
               <table className="table table-xs">
                 <thead className="text-[#665DCD]">
@@ -21,6 +21,7 @@ const AllArtTablePage = () => {
                     <th>Price $</th>
                     <th>Rating</th>
                     <th>Stock Status</th>
+                    <th>Owner's Email</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -37,6 +38,7 @@ const AllArtTablePage = () => {
                     <th>Price $</th>
                     <th>Rating</th>
                     <th>Stock Status</th>
+                    <th>Owner's Email</th>
                     <th>Action</th>
                   </tr>
                 </tfoot>

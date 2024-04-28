@@ -2,15 +2,8 @@ import { Link } from "react-router-dom";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 const AllArtTableRow = ({ art, index }) => {
-  const {
-    _id,
-    title,
-    category,
-    price,
-    rating,
-
-    stock_status,
-  } = art || {};
+  const { _id, title, category, price, rating, posted_by_email, stock_status } =
+    art || {};
   return (
     <tr>
       <th className="text-[#5FA4E6]">{index + 1}</th>
@@ -19,8 +12,12 @@ const AllArtTableRow = ({ art, index }) => {
       <td>{price}</td>
       <td>{rating}</td>
       <td>{stock_status}</td>
+      <td>{posted_by_email}</td>
       <td>
-        <Link className="flex w-28 items-center justify-center gap-1 bg-[#665DCD] px-2 py-1 text-white">
+        <Link
+          to={`/art-details/${_id}`}
+          className="flex w-28 items-center justify-center gap-1 bg-[#665DCD] px-2 py-1 text-white"
+        >
           <p>View Details</p>
           <FaArrowAltCircleRight />
         </Link>

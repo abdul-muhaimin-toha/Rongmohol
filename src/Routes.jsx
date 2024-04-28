@@ -13,6 +13,8 @@ import UpdateArtPage from "./pages/UpdateArtPage";
 import ArtDetailsPage from "./pages/ArtDetailsPage";
 import AllArtTablePage from "./pages/AllArtTablePage";
 import MyArtPage from "./pages/MyArtPage";
+import AllArts from "./pages/ALLArts";
+import ErrorPage from "./pages/ErrorPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,7 +39,7 @@ export const router = createBrowserRouter(
         }
       />
       <Route
-        path="art-details"
+        path="art-details/:id"
         element={
           <PrivateRoute>
             <ArtDetailsPage />
@@ -45,7 +47,7 @@ export const router = createBrowserRouter(
         }
       />
       <Route
-        path="all-arts"
+        path="arts-db"
         element={
           <PrivateRoute>
             <AllArtTablePage />
@@ -60,6 +62,15 @@ export const router = createBrowserRouter(
           </PrivateRoute>
         }
       />
+      <Route
+        path="all-arts"
+        element={
+          <PrivateRoute>
+            <AllArts />
+          </PrivateRoute>
+        }
+      />
+      <Route path="*" element={<ErrorPage />} />
     </Route>,
   ),
 );

@@ -27,9 +27,10 @@ const ContactUs = () => {
           ></textarea>
 
           <input
+            disabled
             type="submit"
             value="Send Message"
-            className="mt-4 rounded-md bg-gradient-bg p-3  font-bold transition-all duration-150 hover:text-white md:mt-6 "
+            className="mt-4 cursor-pointer rounded-md bg-gradient-bg p-3  font-bold transition-all duration-150 hover:text-white md:mt-6 "
           />
         </form>
       </div>

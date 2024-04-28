@@ -92,6 +92,13 @@ const Navbar = () => {
                   </Link>
 
                   <Link
+                    to="arts-db"
+                    className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+                  >
+                    Arts DB
+                  </Link>
+
+                  <Link
                     to="my-arts"
                     className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
                   >
@@ -144,6 +151,13 @@ const Navbar = () => {
               </Link>
 
               <Link
+                to="arts-db"
+                className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
+              >
+                Arts DB
+              </Link>
+
+              <Link
                 to="my-arts"
                 className=" outline-none transition-all duration-150 hover:bg-transparent hover:text-white"
               >
@@ -178,7 +192,9 @@ const Navbar = () => {
                     <p>{user.displayName}</p>
                   </li>
                   <li>
-                    <button onClick={handleLogOut}>Sign Out</button>
+                    <button className="hover:text-white" onClick={handleLogOut}>
+                      Sign Out
+                    </button>
                   </li>
                 </ul>
               </div>

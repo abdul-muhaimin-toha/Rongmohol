@@ -43,7 +43,7 @@ const UpdateArtPage = () => {
         if (response.data.modifiedCount > 0) {
           e.target.reset();
           refetch();
-          toast("Art's information updated successfully", {
+          toast("Art updated successfully", {
             icon: "👏",
             style: {
               borderRadius: "10px",
@@ -69,11 +69,11 @@ const UpdateArtPage = () => {
   return (
     <section>
       <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex items-center justify-center py-10 md:py-24">
+        <div className="flex items-center justify-center py-10">
           <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">
-            <h3 className="mb-8 text-center text-4xl font-bold text-[#665DCD] md:text-5xl ">
+            <h2 className="mx-auto mb-8 max-w-xl text-center text-2xl font-semibold uppercase lg:text-3xl">
               Update {data?.title} Information!
-            </h3>
+            </h2>
             <form
               onSubmit={handleUpdateInformation}
               className="grid grid-cols-1 gap-3 md:grid-cols-2"
@@ -147,6 +147,7 @@ const UpdateArtPage = () => {
               />
 
               <input
+                disabled
                 type="text"
                 name="posted_by_name"
                 defaultValue={data?.posted_by_name}
@@ -154,6 +155,7 @@ const UpdateArtPage = () => {
                 className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
               />
               <input
+                disabled
                 type="text"
                 name="posted_by_email"
                 defaultValue={data?.posted_by_email}

@@ -5,8 +5,14 @@ import "swiper/css/pagination";
 
 import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Hero = () => {
+  const [text] = useTypewriter({
+    words: ["EXPRESSION", "INSPIRATION", "CREATION"],
+    loop: 0,
+  });
+
   return (
     <section className="relative z-30">
       <Swiper
@@ -45,12 +51,12 @@ const Hero = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2  justify-center  p-10">
-        <div className="flex max-w-full flex-col  text-center md:max-w-2xl">
-          <h1 className="mb-8 text-4xl font-semibold uppercase text-white lg:text-6xl">
-            Your Premier Destination for Artistic Expression
+      <div className="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2  justify-center p-10">
+        <div className="flex max-w-full flex-col  text-center md:max-w-3xl">
+          <h1 className="mb-8 text-4xl font-semibold uppercase text-white md:text-5xl">
+            Your Premier Destination for Artistic {text}
           </h1>
-          <p className="font-semibolod mb-8 text-base text-white">
+          <p className="font-semibolod mb-8 text-sm text-white md:text-base">
             Embark on a Journey of Self-Expression with Our Vast Selection of
             Painting, Crafted to Inspire Your Imagination and Bring Your Vision
             to Life
