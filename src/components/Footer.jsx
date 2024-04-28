@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 
 const Footer = () => {
   return (
-    <section className="bg-gradient-bg">
+    <section className="dark:bg-gradient-bg-2 bg-gradient-bg text-black dark:text-white">
       <div className="mx-auto max-w-screen-2xl px-4">
         <footer className="footer footer-center gap-4 p-10 ">
           <div className="flex max-w-xs items-center justify-center">

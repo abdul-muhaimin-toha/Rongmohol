@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const useMyArt = (user) => {
+const useArtsFromCategory = (category) => {
   const { data, isLoading, refetch } = useQuery({
-    queryKey: ["my_arts", user],
+    queryKey: ["arts_by_category", category],
     queryFn: async () => {
       const response = await axios.get(
-        `http://localhost:3000/my-arts/${user.email}`,
+        `http://localhost:3000/arts-by-category/${category}`,
       );
 
       return response.data;
@@ -16,4 +16,4 @@ const useMyArt = (user) => {
   return { data, isLoading, refetch };
 };
 
-export default useMyArt;
+export default useArtsFromCategory;

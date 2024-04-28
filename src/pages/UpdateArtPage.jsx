@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom";
 import useSingleArt from "../hooks/useSingleArt";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Loader from "../components/Loader";
 
 const UpdateArtPage = () => {
   const { id } = useParams();
-  const { data, refetch } = useSingleArt(id);
+  const { data, isLoading, refetch } = useSingleArt(id);
 
   const handleUpdateInformation = (e) => {
     e.preventDefault();
@@ -67,112 +68,118 @@ const UpdateArtPage = () => {
   };
 
   return (
-    <section>
-      <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex items-center justify-center py-10">
-          <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">
-            <h2 className="mx-auto mb-8 max-w-xl text-center text-2xl font-semibold uppercase lg:text-3xl">
-              Update {data?.title} Information!
-            </h2>
-            <form
-              onSubmit={handleUpdateInformation}
-              className="grid grid-cols-1 gap-3 md:grid-cols-2"
-            >
-              <input
-                type="text"
-                name="title"
-                defaultValue={data?.title}
-                placeholder="Enter your art title"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
+    <>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <section>
+          <div className="mx-auto max-w-screen-2xl px-4">
+            <div className="flex items-center justify-center py-10">
+              <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">
+                <h2 className="mx-auto mb-8 max-w-xl text-center text-2xl font-semibold uppercase text-black text-black lg:text-3xl dark:text-white">
+                  Update {data?.title} Information!
+                </h2>
+                <form
+                  onSubmit={handleUpdateInformation}
+                  className="grid grid-cols-1 gap-3 md:grid-cols-2"
+                >
+                  <input
+                    type="text"
+                    name="title"
+                    defaultValue={data?.title}
+                    placeholder="Enter your art title"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
 
-              <input
-                type="text"
-                name="category"
-                defaultValue={data?.category}
-                placeholder="Your art category"
-                className="col-span-1 border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
+                  <input
+                    type="text"
+                    name="category"
+                    defaultValue={data?.category}
+                    placeholder="Your art category"
+                    className="col-span-1 border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
 
-              <textarea
-                name="description"
-                placeholder="Short Description"
-                defaultValue={data?.description}
-                cols="2"
-                rows="3"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD] md:col-span-2"
-              ></textarea>
+                  <textarea
+                    name="description"
+                    placeholder="Short Description"
+                    defaultValue={data?.description}
+                    cols="2"
+                    rows="3"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] md:col-span-2 dark:border-[#525155] dark:text-white"
+                  ></textarea>
 
-              <input
-                name="price"
-                type="text"
-                defaultValue={data?.price}
-                placeholder="Price in USD"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
-              <input
-                type="text"
-                name="rating"
-                defaultValue={data?.rating}
-                placeholder="Rating out of 5"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
-              <input
-                type="text"
-                name="customizable"
-                defaultValue={data?.customizable}
-                placeholder="Customizeable? (yes / no)"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
-              <input
-                type="text"
-                name="processing_time"
-                defaultValue={data?.processing_time}
-                placeholder="Processing time in minute"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
-              <input
-                type="text"
-                name="stock_status"
-                defaultValue={data?.stock_status}
-                placeholder="Stock status (in stock / stock out)"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
-              <input
-                type="text"
-                name="img_URL"
-                defaultValue={data?.img_URL}
-                placeholder="Image URL"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
+                  <input
+                    name="price"
+                    type="text"
+                    defaultValue={data?.price}
+                    placeholder="Price in USD"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
+                  <input
+                    type="text"
+                    name="rating"
+                    defaultValue={data?.rating}
+                    placeholder="Rating out of 5"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
+                  <input
+                    type="text"
+                    name="customizable"
+                    defaultValue={data?.customizable}
+                    placeholder="Customizeable? (yes / no)"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
+                  <input
+                    type="text"
+                    name="processing_time"
+                    defaultValue={data?.processing_time}
+                    placeholder="Processing time in minute"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
+                  <input
+                    type="text"
+                    name="stock_status"
+                    defaultValue={data?.stock_status}
+                    placeholder="Stock status (in stock / stock out)"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
+                  <input
+                    type="text"
+                    name="img_URL"
+                    defaultValue={data?.img_URL}
+                    placeholder="Image URL"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
 
-              <input
-                disabled
-                type="text"
-                name="posted_by_name"
-                defaultValue={data?.posted_by_name}
-                placeholder="User name"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
-              <input
-                disabled
-                type="text"
-                name="posted_by_email"
-                defaultValue={data?.posted_by_email}
-                placeholder="User email"
-                className="border border-[#b7b4d8] p-4 focus:outline-[#665DCD]"
-              />
+                  <input
+                    disabled
+                    type="text"
+                    name="posted_by_name"
+                    defaultValue={data?.posted_by_name}
+                    placeholder="User name"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
+                  <input
+                    disabled
+                    type="text"
+                    name="posted_by_email"
+                    defaultValue={data?.posted_by_email}
+                    placeholder="User email"
+                    className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] dark:text-white"
+                  />
 
-              <input
-                type="submit"
-                value="Update Information"
-                className="mt-4 cursor-pointer rounded-md bg-gradient-bg p-3 font-bold  transition-all duration-150 hover:text-white md:col-span-2 "
-              />
-            </form>
+                  <input
+                    type="submit"
+                    value="Update Information"
+                    className="dark:bg-gradient-bg-2 mt-4 cursor-pointer rounded-md bg-gradient-bg p-3  font-bold text-black transition-all duration-150 hover:text-white md:col-span-2 "
+                  />
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      )}
+    </>
   );
 };
 

@@ -15,6 +15,7 @@ import AllArtTablePage from "./pages/AllArtTablePage";
 import MyArtPage from "./pages/MyArtPage";
 import AllArts from "./pages/ALLArts";
 import ErrorPage from "./pages/ErrorPage";
+import ArtsCategory from "./pages/ArtsCategory";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -67,6 +68,14 @@ export const router = createBrowserRouter(
         element={
           <PrivateRoute>
             <AllArts />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="arts-category/:category"
+        element={
+          <PrivateRoute>
+            <ArtsCategory />
           </PrivateRoute>
         }
       />

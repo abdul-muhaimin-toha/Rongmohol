@@ -10,7 +10,7 @@ const QAndN = () => {
         />
         <div className="mx-auto max-w-screen-md">
           <div className="join join-vertical w-full space-y-4 ">
-            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2">
+            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2 text-black dark:border-[#515155] dark:text-white">
               <input type="radio" name="my-accordion-4" defaultChecked />
               <div className="collapse-title text-xl font-medium">
                 What types of artwork do you specialize in selling on your
@@ -24,7 +24,7 @@ const QAndN = () => {
                 </p>
               </div>
             </div>
-            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2">
+            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2 text-black dark:border-[#515155] dark:text-white">
               <input type="radio" name="my-accordion-4" />
               <div className="collapse-title text-xl font-medium">
                 Can I find artwork from a variety of artists on your website?
@@ -37,7 +37,7 @@ const QAndN = () => {
                 </p>
               </div>
             </div>
-            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2">
+            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2 text-black dark:border-[#515155] dark:text-white">
               <input type="radio" name="my-accordion-4" />
               <div className="collapse-title text-xl font-medium">
                 How do I know if the artwork I purchase is authentic?
@@ -50,7 +50,7 @@ const QAndN = () => {
                 </p>
               </div>
             </div>
-            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2">
+            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2 text-black dark:border-[#515155] dark:text-white">
               <input type="radio" name="my-accordion-4" />
               <div className="collapse-title text-xl font-medium">
                 Do you offer framing services for the artwork purchased on your
@@ -65,7 +65,7 @@ const QAndN = () => {
                 </p>
               </div>
             </div>
-            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2">
+            <div className="collapse join-item collapse-arrow border border-[#b7b4d8] p-2 text-black dark:border-[#515155] dark:text-white">
               <input type="radio" name="my-accordion-4" />
               <div className="collapse-title text-xl font-medium">
                 What is your return policy for artwork purchased on your

@@ -1,6 +1,6 @@
 const SectionHeading = ({ heading, subHeading }) => {
   return (
-    <div className="py-20 text-center md:pt-32">
+    <div className="py-20 text-center text-black md:pt-32 dark:text-white">
       <h2 className="mx-auto max-w-xl text-4xl font-semibold uppercase lg:text-5xl">
         {heading}
       </h2>

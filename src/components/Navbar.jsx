@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
+import defaultUser from "../assets/user_default.png";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -32,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <section className="sticky right-0 top-0 z-50 bg-gradient-bg">
+    <section className="dark:bg-gradient-bg-2 sticky right-0 top-0 z-50 bg-gradient-bg">
       <div className="mx-auto max-w-screen-2xl pr-3">
         <nav className="navbar">
           <div className="navbar-start items-center justify-start gap-2 ">
@@ -73,7 +74,7 @@ const Navbar = () => {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <ul className="menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8 text-black">
+                <ul className="dark:bg-gradient-bg-2 menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8 text-black">
                   <Link to="/" className="justify-left flex items-center">
                     <img src={logo} alt="Rong Mohol Logo" className="h-5" />
                   </Link>
@@ -181,12 +182,12 @@ const Navbar = () => {
                   className="avatar btn btn-circle btn-ghost"
                 >
                   <div className="w-9 rounded-full ring-2 ring-blue-400">
-                    <img alt="User Image" src={user.photoURL} />
+                    <img alt="User Image" src={user.photoURL || defaultUser} />
                   </div>
                 </div>
                 <ul
                   tabIndex={0}
-                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 space-y-1  rounded-sm bg-base-100 bg-gradient-bg p-2 text-black shadow"
+                  className="dark:bg-gradient-bg-2 menu dropdown-content menu-sm z-[1] mt-3 w-52  space-y-1 rounded-sm bg-base-100 bg-gradient-bg p-2 text-black shadow"
                 >
                   <li>
                     <p>{user.displayName}</p>

@@ -63,7 +63,7 @@ const Hero = () => {
           </p>
           <Link
             to="/add-art"
-            className="self-center rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase transition duration-150 hover:text-white"
+            className="dark:bg-gradient-bg-2 self-center rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase text-black transition duration-150 hover:text-white"
           >
             Post Your Art
           </Link>

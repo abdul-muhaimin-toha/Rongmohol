@@ -76,7 +76,7 @@ const MyArtCard = ({ art, refetch }) => {
         <div className="flex flex-col items-start justify-center gap-3">
           <div className="flex  w-full flex-wrap items-start justify-between gap-3 md:min-h-16 xl:min-h-10 2xl:min-h-8">
             <h2 className="text-xl font-bold uppercase text-white">{title}</h2>
-            <h4 className="rounded-full bg-[#D2AB67] px-2 py-1 text-xs font-semibold capitalize text-white">
+            <h4 className="rounded-full bg-[#D2AB67] px-2 py-1 text-xs font-semibold capitalize text-white dark:bg-[#119464]">
               {category}
             </h4>
           </div>
@@ -96,18 +96,18 @@ const MyArtCard = ({ art, refetch }) => {
             <p className="my-3 text-xs text-white md:min-h-20 lg:min-h-24 xl:min-h-20 2xl:min-h-12">
               {description}
             </p>
-            <p className="my-3 rounded-sm bg-[#D2AB67] px-2 py-1 text-xs capitalize italic text-white">
+            <p className="my-3 rounded-sm bg-[#D2AB67] px-2 py-1 text-xs capitalize italic text-white dark:bg-[#119464]">
               Customizable: {customizable}
             </p>
             <Link
               to={`/update-art/${_id}`}
-              className="w-full rounded-md bg-gradient-bg py-3 text-center  font-semibold uppercase transition-all duration-150 hover:text-white"
+              className="dark:bg-gradient-bg-2 w-full rounded-md bg-gradient-bg py-3  text-center font-semibold uppercase text-black transition-all duration-150 hover:text-white"
             >
               Update Art Information
             </Link>
             <button
               onClick={handleArtDelete}
-              className="w-full rounded-md bg-gradient-bg py-3 text-center  font-semibold uppercase transition-all duration-150 hover:text-white"
+              className="dark:bg-gradient-bg-2 w-full rounded-md bg-gradient-bg py-3 text-center font-semibold uppercase text-black transition-all duration-150 hover:text-white"
             >
               Delete Art
             </button>
