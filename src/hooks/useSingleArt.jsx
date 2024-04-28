@@ -5,7 +5,9 @@ const useSingleArt = (id) => {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["art", id],
     queryFn: async () => {
-      const response = await axios.get(`http://localhost:3000/arts/${id}`);
+      const response = await axios.get(
+        `https://rongmohol-server.vercel.app/arts/${id}`,
+      );
 
       return response.data;
     },

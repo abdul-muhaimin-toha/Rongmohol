@@ -30,7 +30,7 @@ const MyArtCard = ({ art, refetch }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:3000/arts/${_id}`)
+          .delete(`https://rongmohol-server.vercel.app/arts/${_id}`)
           .then((response) => {
             console.log(response.data);
             if (response.data.deletedCount > 0) {
@@ -101,13 +101,13 @@ const MyArtCard = ({ art, refetch }) => {
             </p>
             <Link
               to={`/update-art/${_id}`}
-              className="dark:bg-gradient-bg-2 w-full rounded-md bg-gradient-bg py-3  text-center font-semibold uppercase text-black transition-all duration-150 hover:text-white"
+              className="w-full rounded-md bg-gradient-bg py-3 text-center  font-semibold uppercase text-black transition-all duration-150 hover:text-white dark:bg-gradient-bg-2"
             >
               Update Art Information
             </Link>
             <button
               onClick={handleArtDelete}
-              className="dark:bg-gradient-bg-2 w-full rounded-md bg-gradient-bg py-3 text-center font-semibold uppercase text-black transition-all duration-150 hover:text-white"
+              className="w-full rounded-md bg-gradient-bg py-3 text-center font-semibold uppercase text-black transition-all duration-150 hover:text-white dark:bg-gradient-bg-2"
             >
               Delete Art
             </button>

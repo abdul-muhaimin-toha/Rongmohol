@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex max-w-xs items-center justify-center">
             <img src={logo} alt="Logo" className="mt-4 w-full" />
           </div>
-          <aside>
+          <aside className="text-xs md:text-sm">
             <p className="mt-3 font-bold">Rong Mohol Industries Ltd.</p>
             <p>Azampur, Uttara, Dhaka, Bangladesh.</p>
             <p>880 17903 49650</p>

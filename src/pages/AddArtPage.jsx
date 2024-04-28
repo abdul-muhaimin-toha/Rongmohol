@@ -34,7 +34,7 @@ const AddArtPage = () => {
     };
 
     axios
-      .post("http://localhost:3000/arts", newAddedArt)
+      .post("https://rongmohol-server.vercel.app/arts", newAddedArt)
       .then(function (response) {
         console.log(response.data);
         if (response.data.insertedId) {

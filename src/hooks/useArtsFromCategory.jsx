@@ -6,7 +6,7 @@ const useArtsFromCategory = (category) => {
     queryKey: ["arts_by_category", category],
     queryFn: async () => {
       const response = await axios.get(
-        `http://localhost:3000/arts-by-category/${category}`,
+        `https://rongmohol-server.vercel.app/arts-by-category/${category}`,
       );
 
       return response.data;

@@ -39,7 +39,7 @@ const UpdateArtPage = () => {
     };
 
     axios
-      .put(`http://localhost:3000/arts/${id}`, newInformation)
+      .put(`https://rongmohol-server.vercel.app/arts/${id}`, newInformation)
       .then((response) => {
         if (response.data.modifiedCount > 0) {
           e.target.reset();

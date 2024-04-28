@@ -174,7 +174,7 @@ const Navbar = () => {
               </Link>
             </ul>
           </div>
-          <div className="navbar-end gap-5">
+          <div className="navbar-end gap-2 md:gap-4 lg:gap-6">
             <ThemeController />
             {user ? (
               <div title={user.displayName} className="dropdown dropdown-end">

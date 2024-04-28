@@ -5,7 +5,9 @@ const useCategories = () => {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["art_categories"],
     queryFn: async () => {
-      const response = await axios.get("http://localhost:3000/art-categories");
+      const response = await axios.get(
+        "https://rongmohol-server.vercel.app/art-categories",
+      );
 
       return response.data;
     },

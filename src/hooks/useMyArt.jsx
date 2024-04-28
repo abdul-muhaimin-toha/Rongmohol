@@ -6,7 +6,7 @@ const useMyArt = (user) => {
     queryKey: ["my_arts", user],
     queryFn: async () => {
       const response = await axios.get(
-        `http://localhost:3000/my-arts/${user.email}`,
+        `https://rongmohol-server.vercel.app/my-arts/${user.email}`,
       );
 
       return response.data;
