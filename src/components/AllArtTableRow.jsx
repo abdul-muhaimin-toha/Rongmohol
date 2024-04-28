@@ -16,7 +16,7 @@ const AllArtTableRow = ({ art, index }) => {
       <td>
         <Link
           to={`/art-details/${_id}`}
-          className="flex w-28 items-center justify-center gap-1 bg-[#417763] px-2 py-1 text-white"
+          className="flex w-28 items-center justify-center gap-1 bg-[#266daf] px-2 py-1 text-white dark:bg-[#417763]"
         >
           <p>View Details</p>
           <FaArrowAltCircleRight />

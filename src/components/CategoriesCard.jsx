@@ -5,7 +5,8 @@ const CategoriesCard = ({ category }) => {
   const { name, description, image_URL } = category || {};
 
   return (
-    <div
+    <Link
+      to={`/arts-category/${name}`}
       style={{
         backgroundImage: `url(${image_URL || "/src/assets/categories/categoryDefault.jpg"})`,
       }}
@@ -18,15 +19,12 @@ const CategoriesCard = ({ category }) => {
         <p className=" text-sm font-normal lg:min-h-36 xl:min-h-24 2xl:min-h-0">
           {description}
         </p>
-        <Link
-          to={`/arts-category/${name}`}
-          className=" flex items-center gap-3 font-bold uppercase transition-all duration-150 hover:text-black"
-        >
+        <div className=" flex items-center gap-3 font-bold uppercase transition-all duration-150 hover:text-black">
           <p className="">Expolore</p>
           <FaArrowAltCircleRight />
-        </Link>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

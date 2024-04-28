@@ -205,14 +205,14 @@ const Navbar = () => {
                   to="/sign-in"
                   className="flex items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-black"
                 >
-                  <div className="h-4 w-4 rounded-full bg-gradient-bg"></div>
+                  <div className="bg-gradient-bg-2 h-4 w-4 rounded-full dark:bg-gradient-bg"></div>
                   <p>Sign In</p>
                 </Link>
                 <Link
                   to="registration"
                   className="hidden items-center justify-center gap-1.5 font-semibold uppercase text-white transition-all duration-150 hover:text-[black] md:flex"
                 >
-                  <div className="h-4 w-4 rounded-full bg-gradient-bg"></div>
+                  <div className="h-4 w-4 rounded-full bg-gradient-bg dark:bg-gradient-bg"></div>
                   <p>Registration</p>
                 </Link>
               </div>
