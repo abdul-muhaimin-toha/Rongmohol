@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -26,6 +27,10 @@ const CategoriesCard = ({ category }) => {
       </div>
     </Link>
   );
+};
+
+CategoriesCard.propTypes = {
+  category: PropTypes.object,
 };
 
 export default CategoriesCard;

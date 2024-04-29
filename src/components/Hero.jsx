@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 
 import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   const [text] = useTypewriter({
@@ -63,7 +63,7 @@ const Hero = () => {
           </p>
           <Link
             to="/add-art"
-            className="dark:bg-gradient-bg-2 self-center rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase text-black transition duration-150 hover:text-white"
+            className="self-center rounded-md bg-gradient-bg px-5 py-3 font-semibold uppercase text-black transition duration-150 hover:text-white dark:bg-gradient-bg-2"
           >
             Post Your Art
           </Link>

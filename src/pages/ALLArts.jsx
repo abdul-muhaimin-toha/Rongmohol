@@ -1,10 +1,8 @@
 import HomeProductCard from "../components/HomeProductCard";
-import useAuth from "../hooks/useAuth";
 import useAllArt from "../hooks/useAllArt";
 import Loader from "../components/Loader";
 
 const AllArts = () => {
-  const { user } = useAuth();
   const { data, isLoading } = useAllArt();
 
   return (

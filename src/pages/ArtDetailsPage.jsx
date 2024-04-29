@@ -60,6 +60,9 @@ const ArtDetailsPage = () => {
                           <p className=" rounded-sm bg-[#D2AB67] px-2 py-1 text-xs capitalize italic text-white dark:bg-[#119464]">
                             Customizable: {data?.customizable}
                           </p>
+                          <p className=" rounded-sm bg-[#D2AB67] px-2 py-1 text-xs capitalize italic text-white dark:bg-[#119464]">
+                            Processing Time: {data?.processing_time} min
+                          </p>
                           <p className=" rounded-sm bg-[#665DCD] px-2 py-1 text-xs capitalize italic text-white dark:bg-[#119464]">
                             Artist: {data?.posted_by_name}
                           </p>

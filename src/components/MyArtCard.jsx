@@ -3,6 +3,7 @@ import { FaRegStar, FaDollarSign } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
+import PropTypes from "prop-types";
 
 const MyArtCard = ({ art, refetch }) => {
   const {
@@ -116,6 +117,11 @@ const MyArtCard = ({ art, refetch }) => {
       </div>
     </div>
   );
+};
+
+MyArtCard.propTypes = {
+  art: PropTypes.object,
+  refetch: PropTypes.func,
 };
 
 export default MyArtCard;

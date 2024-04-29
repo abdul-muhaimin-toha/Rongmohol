@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
@@ -24,6 +25,11 @@ const AllArtTableRow = ({ art, index }) => {
       </td>
     </tr>
   );
+};
+
+AllArtTableRow.propTypes = {
+  art: PropTypes.object,
+  index: PropTypes.number,
 };
 
 export default AllArtTableRow;

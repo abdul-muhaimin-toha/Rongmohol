@@ -183,8 +183,12 @@ const Navbar = () => {
                   role="button"
                   className="avatar btn btn-circle btn-ghost"
                 >
-                  <div className="w-9 rounded-full ring-2 ring-blue-400">
-                    <img alt="User Image" src={user.photoURL || defaultUser} />
+                  <div className="h-8 w-8 overflow-hidden rounded-full ring-2 ring-blue-400">
+                    <img
+                      className="object-cover"
+                      alt="User Image"
+                      src={user.photoURL || defaultUser}
+                    />
                   </div>
                 </div>
                 <ul

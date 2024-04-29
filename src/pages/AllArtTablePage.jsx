@@ -26,7 +26,7 @@ const AllArtTablePage = () => {
                         <th>Price $</th>
                         <th>Rating</th>
                         <th>Stock Status</th>
-                        <th>Owner's Email</th>
+                        <th>Owner&apos;s Email</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -43,7 +43,7 @@ const AllArtTablePage = () => {
                         <th>Price $</th>
                         <th>Rating</th>
                         <th>Stock Status</th>
-                        <th>Owner's Email</th>
+                        <th>Owner&apos;s Email</th>
                         <th>Action</th>
                       </tr>
                     </tfoot>
