@@ -46,7 +46,7 @@ const ArtDetailsPage = () => {
                             <h4>{data?.rating}</h4>
                             <FaRegStar />
                           </div>
-                          <div className="flex items-center justify-center gap-1 rounded-full bg-white px-4 py-1 text-black">
+                          <div className="flex items-center justify-center gap-1 rounded-full bg-white px-4 py-1 capitalize text-black">
                             <h4>{data?.stock_status}</h4>
                           </div>
                         </div>

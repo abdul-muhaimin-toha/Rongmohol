@@ -6,13 +6,13 @@ const AllArtTableRow = ({ art, index }) => {
   const { _id, title, category, price, rating, posted_by_email, stock_status } =
     art || {};
   return (
-    <tr className="dark:text-white">
+    <tr className="dark:text-white ">
       <th className="text-[#5FA4E6]">{index + 1}</th>
-      <td>{title}</td>
-      <td>{category}</td>
+      <td className="capitalize">{title}</td>
+      <td className="capitalize">{category}</td>
       <td>{price}</td>
       <td>{rating}</td>
-      <td>{stock_status}</td>
+      <td className="capitalize">{stock_status}</td>
       <td>{posted_by_email}</td>
       <td>
         <Link

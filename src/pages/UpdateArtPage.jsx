@@ -90,13 +90,33 @@ const UpdateArtPage = () => {
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
 
-                  <input
+                  {/* <input
                     type="text"
                     name="category"
                     defaultValue={data?.category}
                     placeholder="Your art category"
                     className="col-span-1 border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
-                  />
+                  /> */}
+
+                  <select
+                    defaultValue={data?.category}
+                    name="category"
+                    className="input-select col-span-1 border border-[#b7b4d8] bg-right p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36]"
+                  >
+                    <option className="input-selected">
+                      Choose your category
+                    </option>
+                    <option value="portrait drawing">Portrait Drawing</option>
+                    <option value="watercolor drawing">
+                      Watercolor Drawing
+                    </option>
+                    <option value="oilcolor painting">Oilcolor Painting</option>
+                    <option value="charcoal sketch">Charcoal Sketch</option>
+                    <option value="cartoon drawing">Cartoon Drawing</option>
+                    <option value="landscape painting">
+                      Landscape Painting
+                    </option>
+                  </select>
 
                   <textarea
                     name="description"
@@ -121,13 +141,21 @@ const UpdateArtPage = () => {
                     placeholder="Rating out of 5"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
-                  <input
+                  {/* <input
                     type="text"
                     name="customizable"
                     defaultValue={data?.customizable}
                     placeholder="Customizeable? (yes / no)"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
-                  />
+                  /> */}
+                  <select
+                    defaultValue={data?.customizable}
+                    name="customizable"
+                    className="input-select col-span-1 border border-[#b7b4d8] bg-right p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36]"
+                  >
+                    <option value="yes">Customizable: Yes</option>
+                    <option value="no">Customizable: No</option>
+                  </select>
                   <input
                     type="text"
                     name="processing_time"
@@ -135,13 +163,23 @@ const UpdateArtPage = () => {
                     placeholder="Processing time in minute"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
-                  <input
+                  {/* <input
                     type="text"
                     name="stock_status"
                     defaultValue={data?.stock_status}
                     placeholder="Stock status (in stock / stock out)"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
-                  />
+                  /> */}
+                  <select
+                    defaultValue="in stock"
+                    name="stock_status"
+                    className="input-select col-span-1 border border-[#b7b4d8] bg-right p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36]"
+                  >
+                    <option value="in stock">Stock status: In stock</option>
+                    <option value="made to order">
+                      Stock status: Made to order
+                    </option>
+                  </select>
                   <input
                     type="text"
                     name="img_URL"

@@ -33,6 +33,8 @@ const AddArtPage = () => {
       posted_by_email,
     };
 
+    console.log(newAddedArt);
+
     axios
       .post("https://rongmohol-server.vercel.app/arts", newAddedArt)
       .then(function (response) {
@@ -81,12 +83,28 @@ const AddArtPage = () => {
                 className="border border-[#b7b4d8] p-4  text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
 
-              <input
+              {/* <input
                 type="text"
                 name="category"
                 placeholder="Your art category"
                 className="col-span-1 border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
-              />
+              /> */}
+
+              <select
+                defaultValue={"landscape painting"}
+                name="category"
+                className="input-select col-span-1 border border-[#b7b4d8] bg-right p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36]"
+              >
+                <option value="landscape painting" className="input-selected">
+                  Choose your category
+                </option>
+                <option value="portrait drawing">Portrait Drawing</option>
+                <option value="watercolor drawing">Watercolor Drawing</option>
+                <option value="oilcolor painting">Oilcolor Painting</option>
+                <option value="charcoal sketch">Charcoal Sketch</option>
+                <option value="cartoon drawing">Cartoon Drawing</option>
+                <option value="landscape painting">Landscape Painting</option>
+              </select>
 
               <textarea
                 name="description"
@@ -108,24 +126,52 @@ const AddArtPage = () => {
                 placeholder="Rating out of 5"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
-              <input
+
+              {/* <input
                 type="text"
                 name="customizable"
                 placeholder="Customizable? (yes / no)"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
-              />
+              /> */}
+
+              <select
+                defaultValue="yes"
+                name="customizable"
+                className="input-select col-span-1 border border-[#b7b4d8] bg-right p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36]"
+              >
+                <option value="yes" className="input-selected">
+                  Customizable
+                </option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+
               <input
                 type="text"
                 name="processing_time"
                 placeholder="Processing time in minute"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
-              <input
+
+              {/* <input
                 type="text"
                 name="stock_status"
                 placeholder="Stock status (in stock / stock out)"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
-              />
+              /> */}
+
+              <select
+                defaultValue="in stock"
+                name="stock_status"
+                className="input-select col-span-1 border border-[#b7b4d8] bg-right p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36]"
+              >
+                <option value="in stock" className="input-selected">
+                  Stock status
+                </option>
+                <option value="in stock">In stock</option>
+                <option value="made to order">Made to order</option>
+              </select>
+
               <input
                 type="text"
                 name="img_URL"

@@ -19,7 +19,7 @@ import ArtsCategory from "./pages/ArtsCategory";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
       <Route index element={<HomePage />} />
       <Route path="registration" element={<RegistrationPage />} />
       <Route path="sign-in" element={<SignInPage />} />
@@ -79,7 +79,7 @@ export const router = createBrowserRouter(
           </PrivateRoute>
         }
       />
-      <Route path="*" element={<ErrorPage />} />
+      {/* <Route path="*" element={<ErrorPage />} /> */}
     </Route>,
   ),
 );

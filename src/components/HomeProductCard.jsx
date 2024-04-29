@@ -31,7 +31,7 @@ const HomeProductCard = ({ art }) => {
         <div className="flex flex-col items-start justify-center gap-3">
           <div className="flex  w-full flex-wrap items-start justify-between gap-3 md:min-h-16 xl:min-h-16 2xl:min-h-8">
             <h2 className="text-xl font-bold uppercase text-white">{title}</h2>
-            <h4 className="text-nowrap rounded-full bg-[#665DCD] px-2 py-1 text-xs font-semibold text-white dark:bg-[#417763]">
+            <h4 className="text-nowrap rounded-full bg-[#665DCD] px-2 py-1 text-xs font-semibold capitalize text-white dark:bg-[#417763]">
               {category}
             </h4>
           </div>
@@ -41,7 +41,7 @@ const HomeProductCard = ({ art }) => {
                 <h4>{rating}</h4>
                 <FaRegStar />
               </div>
-              <div className="flex items-center justify-center gap-1 rounded-full bg-white px-4 py-1 text-black">
+              <div className="flex items-center justify-center gap-1 rounded-full bg-white px-4 py-1 capitalize text-black">
                 <h4>{stock_status}</h4>
               </div>
             </div>
@@ -49,7 +49,9 @@ const HomeProductCard = ({ art }) => {
               <h3>{price}</h3> <FaDollarSign />
             </div>
             <p className="my-3 text-xs text-white md:min-h-20 lg:min-h-24 xl:min-h-20 2xl:min-h-12">
-              {description}
+              {description.length > 240
+                ? description.slice(0, 240) + "..."
+                : description}
             </p>
             <p className="my-2 text-nowrap bg-[#665DCD] p-1.5 text-xs text-white dark:bg-[#417763]">
               Processing Time: {processing_time} min

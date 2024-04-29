@@ -11,9 +11,9 @@ const ErrorPage = () => {
           <Lottie
             animationData={groovyWalkAnimation}
             loop={true}
-            className="mx-auto max-w-screen-sm"
+            className="mx-auto max-w-80 py-20"
           />
-          <p className="rounded-sm bg-gradient-bg px-4 py-2 text-2xl font-black italic text-white dark:bg-gradient-bg-2">
+          <p className="rounded-sm bg-gradient-bg px-4 py-2 text-xl font-black italic text-white dark:bg-gradient-bg-2">
             Page Not Found!
           </p>
           <Link
