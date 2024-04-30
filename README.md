@@ -34,6 +34,8 @@
 
 - Tanstack Query
 
+- Locomotive Scroll
+
 - Axios
 
 - React Helmet Async
