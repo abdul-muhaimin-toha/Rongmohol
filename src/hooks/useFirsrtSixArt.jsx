@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const useFirstSixArt = () => {
-  const { data, isLoading, refetch } = useQuery({
+  const { data, isPending, refetch } = useQuery({
     queryKey: ["arts_first_six"],
     queryFn: async () => {
       const response = await axios.get(
@@ -13,7 +13,7 @@ const useFirstSixArt = () => {
     },
   });
 
-  return { data, isLoading, refetch };
+  return { data, isPending, refetch };
 };
 
 export default useFirstSixArt;

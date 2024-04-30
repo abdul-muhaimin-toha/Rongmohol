@@ -7,7 +7,7 @@ import Loader from "../components/Loader";
 
 const MyArtPage = () => {
   const { user } = useAuth();
-  const { data, isLoading, refetch } = useMyArt(user);
+  const { data, isPending, refetch } = useMyArt(user);
   const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const MyArtPage = () => {
 
   return (
     <>
-      {isLoading ? (
+      {isPending ? (
         <Loader />
       ) : (
         <section>
@@ -41,14 +41,14 @@ const MyArtPage = () => {
                   <div
                     tabIndex={0}
                     role="button"
-                    className="dark:bg-gradient-bg-2 flex items-center gap-2 rounded-sm bg-gradient-bg p-4 text-xs text-white"
+                    className="flex items-center gap-2 rounded-sm bg-gradient-bg p-4 text-xs text-white dark:bg-gradient-bg-2"
                   >
                     <FaChevronDown />
                     <span>Filter based on customization</span>
                   </div>
                   <ul
                     tabIndex={0}
-                    className="dark:bg-gradient-bg-2 menu dropdown-content z-[1] mt-1.5 flex w-full flex-row rounded-sm bg-gradient-bg p-2 text-black shadow"
+                    className="menu dropdown-content z-[1] mt-1.5 flex w-full flex-row rounded-sm bg-gradient-bg p-2 text-black shadow dark:bg-gradient-bg-2"
                   >
                     <li className="flex w-1/3 items-center justify-center transition-all duration-150 hover:text-white">
                       <a onClick={() => handleFilter("yes")}>Yes</a>

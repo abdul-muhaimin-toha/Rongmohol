@@ -6,11 +6,11 @@ import useFirsrtSixArt from "../hooks/useFirsrtSixArt";
 import Loader from "./Loader";
 
 const HomeProducts = () => {
-  const { data, isLoading } = useFirsrtSixArt();
+  const { data, isPending } = useFirsrtSixArt();
 
   return (
     <>
-      {isLoading ? (
+      {isPending ? (
         <Loader />
       ) : (
         <section>

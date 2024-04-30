@@ -3,10 +3,10 @@ import useAllArt from "../hooks/useAllArt";
 import Loader from "../components/Loader";
 
 const AllArtTablePage = () => {
-  const { data, isLoading } = useAllArt();
+  const { data, isPending } = useAllArt();
   return (
     <>
-      {isLoading ? (
+      {isPending ? (
         <Loader />
       ) : (
         <section>

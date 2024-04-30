@@ -3,11 +3,11 @@ import useAllArt from "../hooks/useAllArt";
 import Loader from "../components/Loader";
 
 const AllArts = () => {
-  const { data, isLoading } = useAllArt();
+  const { data, isPending } = useAllArt();
 
   return (
     <>
-      {isLoading ? (
+      {isPending ? (
         <Loader />
       ) : (
         <section>

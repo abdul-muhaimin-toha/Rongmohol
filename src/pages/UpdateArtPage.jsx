@@ -6,7 +6,7 @@ import Loader from "../components/Loader";
 
 const UpdateArtPage = () => {
   const { id } = useParams();
-  const { data, isLoading, refetch } = useSingleArt(id);
+  const { data, isPending, refetch } = useSingleArt(id);
 
   const handleUpdateInformation = (e) => {
     e.preventDefault();
@@ -68,7 +68,7 @@ const UpdateArtPage = () => {
 
   return (
     <>
-      {isLoading ? (
+      {isPending ? (
         <Loader />
       ) : (
         <section>

@@ -4,11 +4,11 @@ import SectionHeading from "./SectionHeading";
 import Loader from "./Loader";
 
 const Categories = () => {
-  const { data, isLoading } = useCategories();
+  const { data, isPending } = useCategories();
 
   return (
     <>
-      {isLoading ? (
+      {isPending ? (
         <Loader />
       ) : (
         <section>

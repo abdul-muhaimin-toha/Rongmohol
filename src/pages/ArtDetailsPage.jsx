@@ -6,10 +6,10 @@ import Loader from "../components/Loader";
 
 const ArtDetailsPage = () => {
   const { id } = useParams();
-  const { data, isLoading } = useSingleArt(id);
+  const { data, isPending } = useSingleArt(id);
   return (
     <>
-      {isLoading ? (
+      {isPending ? (
         <Loader />
       ) : (
         <section>

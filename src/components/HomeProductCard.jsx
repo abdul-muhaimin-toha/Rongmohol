@@ -48,7 +48,7 @@ const HomeProductCard = ({ art }) => {
             <div className=" flex items-center justify-center gap-1 text-2xl font-bold text-white">
               <h3>{price}</h3> <FaDollarSign />
             </div>
-            <p className="my-3 text-xs text-white md:min-h-20 lg:min-h-24 xl:min-h-20 2xl:min-h-12">
+            <p className="my-3 text-xs text-white md:min-h-20 lg:min-h-24 xl:min-h-20 2xl:min-h-16">
               {description.length > 240
                 ? description.slice(0, 240) + "..."
                 : description}

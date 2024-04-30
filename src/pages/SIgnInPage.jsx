@@ -1,9 +1,10 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import Loader from "../components/Loader";
 
 const SignInPage = () => {
   const location = useLocation();
@@ -16,7 +17,8 @@ const SignInPage = () => {
     reset,
   } = useForm();
 
-  const { emailPassLogin, googleLogin, githubLogin } = useAuth();
+  const { user, isLoading, emailPassLogin, googleLogin, githubLogin } =
+    useAuth();
 
   const handleFormSubmit = (data) => {
     const { email, password } = data;
@@ -101,6 +103,14 @@ const SignInPage = () => {
         });
       });
   };
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (user) {
+    return <Navigate to="/"></Navigate>;
+  }
 
   return (
     <section>

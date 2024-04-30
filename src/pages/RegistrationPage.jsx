@@ -1,10 +1,11 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation, Navigate } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
+import Loader from "../components/Loader";
 
 const RegistrationPage = () => {
   const [isPassVisible, setIsPassVisible] = useState(false);
@@ -17,7 +18,8 @@ const RegistrationPage = () => {
     reset,
   } = useForm();
 
-  const { logout, createNewUser, googleLogin, githubLogin } = useAuth();
+  const { user, isLoading, logout, createNewUser, googleLogin, githubLogin } =
+    useAuth();
 
   const handleFormSubmit = (data) => {
     const { name, email, photoURL, password } = data;
@@ -111,6 +113,14 @@ const RegistrationPage = () => {
         });
       });
   };
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (user) {
+    return <Navigate to="/"></Navigate>;
+  }
 
   return (
     <section>

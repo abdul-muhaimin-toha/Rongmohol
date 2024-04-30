@@ -5,11 +5,11 @@ import { useParams } from "react-router-dom";
 
 const ArtsCategory = () => {
   const { category } = useParams();
-  const { data, isLoading } = useArtsFromCategory(category);
+  const { data, isPending } = useArtsFromCategory(category);
 
   return (
     <>
-      {isLoading ? (
+      {isPending ? (
         <Loader />
       ) : (
         <section>

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const useSingleArt = (id) => {
-  const { data, isLoading, refetch } = useQuery({
+  const { data, isPending, refetch } = useQuery({
     queryKey: ["art", id],
     queryFn: async () => {
       const response = await axios.get(
@@ -13,7 +13,7 @@ const useSingleArt = (id) => {
     },
   });
 
-  return { data, isLoading, refetch };
+  return { data, isPending, refetch };
 };
 
 export default useSingleArt;
