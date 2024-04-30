@@ -3,6 +3,7 @@ import useSingleArt from "../hooks/useSingleArt.jsx";
 import { FaRegStar, FaDollarSign } from "react-icons/fa6";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import Loader from "../components/Loader";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const ArtDetailsPage = () => {
   const { id } = useParams();
@@ -13,6 +14,16 @@ const ArtDetailsPage = () => {
         <Loader />
       ) : (
         <section>
+          <HelmetProvider>
+            <Helmet>
+              <title>
+                Rongmohol -{" "}
+                {data?.title.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+                  letter.toUpperCase(),
+                )}
+              </title>
+            </Helmet>
+          </HelmetProvider>
           <div className="mx-auto max-w-screen-2xl px-4">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-center py-20">
               <h2 className="mx-auto mb-12  max-w-4xl text-center text-4xl font-semibold uppercase text-black md:text-5xl dark:text-white">

@@ -1,6 +1,7 @@
 import AllArtTableRow from "../components/AllArtTableRow";
 import useAllArt from "../hooks/useAllArt";
 import Loader from "../components/Loader";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const AllArtTablePage = () => {
   const { data, isPending } = useAllArt();
@@ -10,6 +11,11 @@ const AllArtTablePage = () => {
         <Loader />
       ) : (
         <section>
+          <HelmetProvider>
+            <Helmet>
+              <title>Rongmohol - Art Database</title>
+            </Helmet>
+          </HelmetProvider>
           <div className="mx-auto max-w-screen-2xl px-4">
             <div className="flex items-center justify-center py-10 md:py-24">
               <div className="w-full max-w-screen-xl rounded p-6  shadow-xl md:p-10">

@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="mx-auto max-w-screen-2xl pr-3">
         <nav className="navbar">
           <div className="navbar-start items-center justify-start gap-2 ">
-            <div className="drawer z-40 w-12 lg:hidden">
+            <div className="drawer z-40 w-12  lg:hidden">
               <input
                 id="my-drawer-3"
                 type="checkbox"
@@ -75,7 +75,7 @@ const Navbar = () => {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <ul className="menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8 text-black dark:bg-gradient-bg-2">
+                <ul className="menu min-h-full w-2/3 gap-8 bg-base-200 bg-gradient-bg p-8 text-black md:w-2/6 dark:bg-gradient-bg-2">
                   <Link to="/" className="justify-left flex items-center">
                     <img src={logo} alt="Rong Mohol Logo" className="h-5" />
                   </Link>

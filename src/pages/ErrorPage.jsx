@@ -2,10 +2,16 @@ import Lottie from "lottie-react";
 import groovyWalkAnimation from "../assets/error-animation.json";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const ErrorPage = () => {
   return (
     <section>
+      <HelmetProvider>
+        <Helmet>
+          <title>Rongmohol - Error</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="mx-auto max-w-screen-2xl px-2">
         <div className="flex flex-col items-center justify-center">
           <Lottie

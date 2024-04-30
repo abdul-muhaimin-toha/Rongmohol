@@ -4,6 +4,7 @@ import useAuth from "../hooks/useAuth";
 import useMyArt from "../hooks/useMyArt";
 import { FaChevronDown } from "react-icons/fa6";
 import Loader from "../components/Loader";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const MyArtPage = () => {
   const { user } = useAuth();
@@ -31,6 +32,11 @@ const MyArtPage = () => {
         <Loader />
       ) : (
         <section>
+          <HelmetProvider>
+            <Helmet>
+              <title>Rongmohol - My Arts</title>
+            </Helmet>
+          </HelmetProvider>
           <div className="mx-auto mb-16 max-w-screen-2xl px-4 md:mb-28">
             <div className="py-16 text-center md:pt-20">
               <h2 className="mx-auto max-w-xl text-4xl font-semibold uppercase text-black lg:text-5xl dark:text-white">

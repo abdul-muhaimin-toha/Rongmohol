@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import Loader from "../components/Loader";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const SignInPage = () => {
   const location = useLocation();
@@ -114,6 +115,11 @@ const SignInPage = () => {
 
   return (
     <section>
+      <HelmetProvider>
+        <Helmet>
+          <title>Rongmohol - Sign In</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="mx-auto max-w-screen-2xl px-4">
         <div className="flex items-center justify-center py-10">
           <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">

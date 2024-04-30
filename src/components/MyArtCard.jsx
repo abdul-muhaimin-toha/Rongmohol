@@ -77,7 +77,7 @@ const MyArtCard = ({ art, refetch }) => {
         <div className="flex flex-col items-start justify-center gap-3">
           <div className="flex  w-full flex-wrap items-start justify-between gap-3 md:min-h-16 xl:min-h-10 2xl:min-h-8">
             <h2 className="text-xl font-bold uppercase text-white">{title}</h2>
-            <h4 className="rounded-full bg-[#D2AB67] px-2 py-1 text-xs font-semibold capitalize text-white dark:bg-[#119464]">
+            <h4 className="text-nowrap rounded-full bg-[#D2AB67] px-2 py-1 text-xs font-semibold capitalize text-white dark:bg-[#119464]">
               {category}
             </h4>
           </div>
@@ -99,7 +99,7 @@ const MyArtCard = ({ art, refetch }) => {
                 ? description.slice(0, 240) + "..."
                 : description}
             </p>
-            <p className="my-3 rounded-sm bg-[#D2AB67] px-2 py-1 text-xs capitalize italic text-white dark:bg-[#119464]">
+            <p className="my-3 text-nowrap rounded-sm bg-[#D2AB67] px-2 py-1 text-xs capitalize italic text-white dark:bg-[#119464]">
               Customizable: {customizable}
             </p>
             <Link

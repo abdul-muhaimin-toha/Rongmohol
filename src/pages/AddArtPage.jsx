@@ -1,6 +1,7 @@
 import axios from "axios";
 import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const AddArtPage = () => {
   const { user } = useAuth();
@@ -66,6 +67,11 @@ const AddArtPage = () => {
 
   return (
     <section>
+      <HelmetProvider>
+        <Helmet>
+          <title>Rongmohol - Add Art</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="mx-auto max-w-screen-2xl px-4">
         <div className="flex items-center justify-center py-10">
           <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">

@@ -3,6 +3,7 @@ import useSingleArt from "../hooks/useSingleArt";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Loader from "../components/Loader";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const UpdateArtPage = () => {
   const { id } = useParams();
@@ -72,6 +73,16 @@ const UpdateArtPage = () => {
         <Loader />
       ) : (
         <section>
+          <HelmetProvider>
+            <Helmet>
+              <title>
+                Rongmohol - Update{" "}
+                {data?.title.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+                  letter.toUpperCase(),
+                )}
+              </title>
+            </Helmet>
+          </HelmetProvider>
           <div className="mx-auto max-w-screen-2xl px-4">
             <div className="flex items-center justify-center py-10">
               <div className="w-full max-w-screen-md rounded p-6  shadow-xl md:p-10">
