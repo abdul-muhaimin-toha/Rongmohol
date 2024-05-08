@@ -47,9 +47,11 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const googleLogin = () => {
+    setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   const githubLogin = () => {
+    setIsLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
 

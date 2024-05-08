@@ -19,7 +19,7 @@ const RegistrationPage = () => {
     reset,
   } = useForm();
 
-  const { user, isLoading, logout, createNewUser, googleLogin, githubLogin } =
+  const { setIsLoading, logout, createNewUser, googleLogin, githubLogin } =
     useAuth();
 
   const handleFormSubmit = (data) => {
@@ -59,6 +59,7 @@ const RegistrationPage = () => {
           },
         });
       });
+    setIsLoading(false);
   };
 
   const handleGoogleLogin = () => {
@@ -86,6 +87,7 @@ const RegistrationPage = () => {
           },
         });
       });
+    setIsLoading(false);
   };
 
   const handleGithubLogin = () => {
@@ -113,15 +115,8 @@ const RegistrationPage = () => {
           },
         });
       });
+    setIsLoading(false);
   };
-
-  if (isLoading) {
-    return <Loader />;
-  }
-
-  if (user) {
-    return <Navigate to="/"></Navigate>;
-  }
 
   return (
     <section>

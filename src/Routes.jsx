@@ -7,6 +7,7 @@ import RootLayout from "./RootLayout";
 import HomePage from "./pages/HomePage";
 import RegistrationPage from "./pages/RegistrationPage";
 import PrivateRoute from "./privateRoutes/PrivateRoute";
+import LoggedInRoute from "./privateRoutes/LoggedInRoute";
 import SignInPage from "./pages/SIgnInPage";
 import AddArtPage from "./pages/AddArtPage";
 import UpdateArtPage from "./pages/UpdateArtPage";
@@ -21,8 +22,22 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<HomePage />} />
-      <Route path="registration" element={<RegistrationPage />} />
-      <Route path="sign-in" element={<SignInPage />} />
+      <Route
+        path="registration"
+        element={
+          <LoggedInRoute>
+            <RegistrationPage />
+          </LoggedInRoute>
+        }
+      />
+      <Route
+        path="sign-in"
+        element={
+          <LoggedInRoute>
+            <SignInPage />
+          </LoggedInRoute>
+        }
+      />
       <Route
         path="add-art"
         element={

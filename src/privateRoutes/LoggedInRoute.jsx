@@ -3,19 +3,21 @@ import useAuth from "../hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const PrivateRoute = ({ children }) => {
+const LoggedInRoute = ({ children }) => {
   const { user, isLoading } = useAuth();
   if (isLoading) {
     return <Loader />;
   }
+
   if (user) {
-    return children;
+    return <Navigate to="/" replace></Navigate>;
   }
-  return <Navigate state={location.pathname} to="/sign-in" replace></Navigate>;
+
+  return children;
 };
 
-PrivateRoute.propTypes = {
+LoggedInRoute.propTypes = {
   children: PropTypes.node,
 };
 
-export default PrivateRoute;
+export default LoggedInRoute;

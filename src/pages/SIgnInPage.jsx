@@ -18,14 +18,7 @@ const SignInPage = () => {
     reset,
   } = useForm();
 
-  const {
-    user,
-    isLoading,
-    setIsLoading,
-    emailPassLogin,
-    googleLogin,
-    githubLogin,
-  } = useAuth();
+  const { setIsLoading, emailPassLogin, googleLogin, githubLogin } = useAuth();
 
   const handleFormSubmit = (data) => {
     const { email, password } = data;
@@ -46,7 +39,6 @@ const SignInPage = () => {
       .catch((error) => {
         const errorMessage = error.message;
         console.error(errorMessage);
-        setIsLoading(false);
         toast("Email and password doesn't matched", {
           icon: "❌",
           style: {
@@ -56,6 +48,7 @@ const SignInPage = () => {
           },
         });
       });
+    setIsLoading(false);
   };
 
   const handleGoogleLogin = () => {
@@ -74,7 +67,6 @@ const SignInPage = () => {
       .catch((error) => {
         const errorMessage = error.message;
         console.error(errorMessage);
-
         toast("Google sign in failed", {
           icon: "❌",
           style: {
@@ -84,6 +76,7 @@ const SignInPage = () => {
           },
         });
       });
+    setIsLoading(false);
   };
 
   const handleGithubLogin = () => {
@@ -102,7 +95,6 @@ const SignInPage = () => {
       .catch((error) => {
         const errorMessage = error.message;
         console.error(errorMessage);
-        setIsLoading(false);
         toast("Github sign in failed", {
           icon: "❌",
           style: {
@@ -112,15 +104,8 @@ const SignInPage = () => {
           },
         });
       });
+    setIsLoading(false);
   };
-
-  if (isLoading) {
-    return <Loader />;
-  }
-
-  if (user) {
-    return <Navigate to="/"></Navigate>;
-  }
 
   return (
     <section>
