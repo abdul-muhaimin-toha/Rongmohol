@@ -24,7 +24,7 @@ const Hero = () => {
         }}
         navigation={true}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination]}
@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2  justify-center p-10">
+      <div className="absolute left-1/2 top-1/2 z-50 flex  w-full -translate-x-1/2  -translate-y-1/2 items-center justify-center  p-10">
         <div className="flex max-w-full flex-col  text-center md:max-w-3xl">
           <h1 className="mb-8 text-4xl font-semibold uppercase text-white md:text-5xl">
             Your Premier Destination for Artistic {text}
