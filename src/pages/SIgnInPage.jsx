@@ -131,6 +131,7 @@ const SignInPage = () => {
               className="flex  flex-col"
             >
               <input
+                defaultValue="demouser@gmail.com"
                 type="email"
                 placeholder="Enter your email"
                 className=" border p-4 text-black focus:outline-[#665DCD] dark:border-[#4d4b4b]"
@@ -148,6 +149,7 @@ const SignInPage = () => {
               )}
               <div className="relative">
                 <input
+                  defaultValue="Demo123123"
                   type={isPassVisible ? "text" : "password"}
                   placeholder="Enter your password"
                   className="mt-4 w-full border p-4 text-black focus:outline-[#665DCD]  dark:border-[#4d4b4b] "
