@@ -88,7 +88,6 @@ const AddArtPage = () => {
                 placeholder="Enter your art title"
                 className="border border-[#b7b4d8] p-4  text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
-
               <select
                 defaultValue={"landscape painting"}
                 name="category"
@@ -104,7 +103,6 @@ const AddArtPage = () => {
                 <option value="cartoon drawing">Cartoon Drawing</option>
                 <option value="landscape painting">Landscape Painting</option>
               </select>
-
               <textarea
                 name="description"
                 placeholder="Short Description"
@@ -112,21 +110,18 @@ const AddArtPage = () => {
                 rows="3"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] md:col-span-2 dark:border-[#2e2d36] "
               ></textarea>
-
               <input
                 type="text"
                 name="price"
                 placeholder="Price in USD"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
-
               <input
                 type="text"
                 name="rating"
                 placeholder="Rating out of 5"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
-
               <select
                 defaultValue="yes"
                 name="customizable"
@@ -138,14 +133,12 @@ const AddArtPage = () => {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-
               <input
                 type="text"
                 name="processing_time"
                 placeholder="Processing time in minute"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
-
               <select
                 defaultValue="in stock"
                 name="stock_status"
@@ -157,14 +150,12 @@ const AddArtPage = () => {
                 <option value="in stock">In stock</option>
                 <option value="made to order">Made to order</option>
               </select>
-
               <input
                 type="text"
                 name="img_URL"
                 placeholder="Image URL"
                 className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#2e2d36] "
               />
-
               <input
                 type="text"
                 defaultValue={user.displayName}

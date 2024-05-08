@@ -105,7 +105,6 @@ const UpdateArtPage = () => {
                     placeholder="Enter your art title"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
-
                   <select
                     defaultValue={data?.category}
                     name="category"
@@ -125,7 +124,6 @@ const UpdateArtPage = () => {
                       Landscape Painting
                     </option>
                   </select>
-
                   <textarea
                     name="description"
                     placeholder="Short Description"
@@ -134,7 +132,6 @@ const UpdateArtPage = () => {
                     rows="3"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] md:col-span-2 dark:border-[#525155] "
                   ></textarea>
-
                   <input
                     name="price"
                     type="text"
@@ -142,7 +139,6 @@ const UpdateArtPage = () => {
                     placeholder="Price in USD"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
-
                   <input
                     type="text"
                     name="rating"
@@ -150,7 +146,6 @@ const UpdateArtPage = () => {
                     placeholder="Rating out of 5"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
-
                   <select
                     defaultValue={data?.customizable}
                     name="customizable"
@@ -159,7 +154,6 @@ const UpdateArtPage = () => {
                     <option value="yes">Customizable: Yes</option>
                     <option value="no">Customizable: No</option>
                   </select>
-
                   <input
                     type="text"
                     name="processing_time"
@@ -167,7 +161,6 @@ const UpdateArtPage = () => {
                     placeholder="Processing time in minute"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
-
                   <select
                     defaultValue="in stock"
                     name="stock_status"
@@ -178,7 +171,6 @@ const UpdateArtPage = () => {
                       Stock status: Made to order
                     </option>
                   </select>
-
                   <input
                     type="text"
                     name="img_URL"
@@ -186,7 +178,6 @@ const UpdateArtPage = () => {
                     placeholder="Image URL"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] dark:border-[#525155] "
                   />
-
                   <input
                     disabled
                     type="text"
@@ -195,7 +186,6 @@ const UpdateArtPage = () => {
                     placeholder="User name"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] disabled:bg-white dark:border-[#525155] "
                   />
-
                   <input
                     disabled
                     type="text"
@@ -204,7 +194,6 @@ const UpdateArtPage = () => {
                     placeholder="User email"
                     className="border border-[#b7b4d8] p-4 text-black focus:outline-[#665DCD] disabled:bg-white dark:border-[#525155] "
                   />
-
                   <input
                     type="submit"
                     value="Update Information"

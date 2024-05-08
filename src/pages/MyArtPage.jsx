@@ -5,6 +5,7 @@ import useMyArt from "../hooks/useMyArt";
 import { FaChevronDown } from "react-icons/fa6";
 import Loader from "../components/Loader";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+
 import ErrorPage from "./ErrorPage";
 
 const MyArtPage = () => {

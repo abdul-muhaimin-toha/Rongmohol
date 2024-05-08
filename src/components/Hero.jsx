@@ -17,6 +17,7 @@ const Hero = () => {
     <section className="relative z-30">
       <Swiper
         slidesPerView={1}
+        spaceBetween={0}
         loop={true}
         pagination={{
           clickable: true,
