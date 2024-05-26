@@ -1,10 +1,9 @@
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import Loader from "../components/Loader";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const SignInPage = () => {
@@ -18,7 +17,7 @@ const SignInPage = () => {
     reset,
   } = useForm();
 
-  const { setIsLoading, emailPassLogin, googleLogin, githubLogin } = useAuth();
+  const { emailPassLogin, googleLogin, githubLogin } = useAuth();
 
   const handleFormSubmit = (data) => {
     const { email, password } = data;
@@ -48,7 +47,6 @@ const SignInPage = () => {
           },
         });
       });
-    setIsLoading(false);
   };
 
   const handleGoogleLogin = () => {
@@ -76,7 +74,6 @@ const SignInPage = () => {
           },
         });
       });
-    setIsLoading(false);
   };
 
   const handleGithubLogin = () => {
@@ -104,7 +101,6 @@ const SignInPage = () => {
           },
         });
       });
-    setIsLoading(false);
   };
 
   return (
